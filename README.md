@@ -1,3 +1,4 @@
+This is the repo for team 3 SCAMS
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
