@@ -1,7 +1,6 @@
 # PROJECT NAME (TBD)
 ## Team 3 Scams
-
-## Group Members: Sabrina Lin, Claire Lai, Alyson Yu, Mari Woodworth, Sarah Chu 
+Group Members: Sabrina Lin, Claire Lai, Alyson Yu, Mari Woodworth, Sarah Chu 
 
 ## GitHub Pages
 https://github.com/UW-INFO442-AU23/team-scams
@@ -24,7 +23,7 @@ Our mission is to encourage residents of Seattle to utilize more sustainable mod
 * Lime Scooter
 * Bike
 
-—---
+________
 
 ## User Personas
 [insert personas link here]
