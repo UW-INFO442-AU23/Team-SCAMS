@@ -1,4 +1,10 @@
 
+/* ALL PAGES STYLING */
+body {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
 /* HOME PAGE STYLING */
 
 .calculator-section h2 {
@@ -13,4 +19,25 @@
 
 .resources-section h2 {
     margin-bottom: 2.5rem;
+}
+
+/* RESOURCE PAGE STYLING */
+
+.button_center {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #006D04;
+    border-color: #006D04;
+}
+
+.btn-primary:hover {
+    background-color: #004903;
+    border-color: #004903;;
+}
+
+.callout_container {
+    background-color: #E3EFE3;
+    outline: 5px solid #006D04;
 }
