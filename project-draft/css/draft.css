@@ -5,6 +5,22 @@ body {
     margin-right: 2em;
 }
 
+/* BUTTON STYLING */
+.button_center {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #006D04;
+    border-color: #006D04;
+}
+
+.btn-primary:hover {
+    background-color: #004903;
+    border-color: #004903;;
+}
+
+
 /* HOME PAGE STYLING */
 
 .calculator-section h2 {
@@ -22,22 +38,18 @@ body {
 }
 
 /* RESOURCE PAGE STYLING */
-
-.button_center {
-    text-align: center;
-}
-
-.btn-primary {
-    background-color: #006D04;
-    border-color: #006D04;
-}
-
-.btn-primary:hover {
-    background-color: #004903;
-    border-color: #004903;;
-}
-
 .callout_container {
     background-color: #E3EFE3;
     outline: 5px solid #006D04;
+}
+
+/* QUIZ PAGE STYLING */
+.quiz_background {
+    background-image: url("../../public/busoutline.svg");
+    background-repeat: no-repeat;
+    background-position: top 100px center;
+}
+
+.quiz_window {
+    background-color: #BFDAE3;
 }
