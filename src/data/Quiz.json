@@ -1,0 +1,52 @@
+[
+  {
+    "id": "Q1",
+    "question": "The Link light rail travels between which two stops?",
+    "a": "A. Northgate and SeaTac",
+    "b": "B. University of Washington and International District",
+    "c": "C. Northgate and Angle Lake",
+    "d": "D. Downtown Seattle and Renton",
+    "answer": "c",
+    "explanation": ""
+  },
+  {
+    "id": "Q2",
+    "question": "Walking  ___ steps (around 3-4 miles) can reduce risk of heart disease.",
+    "a": "A. 3000",
+    "b": "B. 5000",
+    "c": "C. 8000",
+    "d": "D. 10,000",
+    "answer": "c",
+    "explanation": ""
+  },
+  {
+    "id": "Q3",
+    "question": "True or false?: Carbon Monoxide is the most prevalent greenhouse gas.",
+    "a": "A. True",
+    "b": "B. False",
+    "c": "",
+    "d": "",
+    "answer": "b",
+    "explanation": "carbon dioxide is the most prevalent greenhouse gas."
+  },
+  {
+    "id": "Q4",
+    "question": "King County Metro carries over ___ passengers daily.",
+    "a": "A. 80,000",
+    "b": "B. 100,000",
+    "c": "C. 350,000",
+    "d": "D. 400,000",
+    "answer": "d",
+    "explanation": ""
+  },
+  {
+    "id": "Q5",
+    "question": "Emissions from the transportation sector accounts for what percentage of total U.S. CO2 emissions?",
+    "a": "A. 35%",
+    "b": "B. 28%",
+    "c": "C. 2%",
+    "d": "D. 50%",
+    "answer": "a",
+    "explanation": "Transportation is the largest source of carbon dioxide emissions in the U.S."
+  }
+]

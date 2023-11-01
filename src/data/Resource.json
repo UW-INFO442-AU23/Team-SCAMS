@@ -1,0 +1,22 @@
+[
+  {
+    "transportation": "Bike",
+    "content": "Seattle’s electric bike share program allows commuters to rent nearest available bikes through apps and leave them parked for the next user. The program, which started in 2017, has seen an average of 3,326 riders every day. Biking can be a fun, low impact way to get around King County!"
+  },
+  {
+    "transportation": "Bus",
+    "content": "King County Metro has 237 bus routes that carry over 400,000 passengers daily as of 2019. The eighth-largest transit bus agency in the United States, Metro passengers can pay the $2.75 fare (for adults) with cash, by tapping an ORCA card, or a smartphone app. If you’re 18 years or younger, you can ride Metro for free!"
+  },
+  {
+    "transportation": "Light Rail",
+    "content": "The Link light rail is one of the newest additions to Seattle public transportation; it’s a rapid form of transportation that travels between Northgate and Angle Lake, making stops every 6, 10, or 15 minutes depending on the time of day at frequently traveled stations, like the SeaTac airport, the University of Washington, and Downtown Seattle."
+  },
+  {
+    "transportation": "Walking",
+    "content": "Of course, walking is also a mode of transportation, and very sustainable! According to Redfin, Seattle has a walkability score of 74, making it a very walkable city. Studies have shown that walking 8000 steps a day (around 3-4 miles) can help drastically reduce risk of heart disease. Consider walking to work, school, or wherever you need to go if you only live a couple miles away!"
+  },
+  {
+    "transportation": "Carpool",
+    "content": "Do you live too far to bike or walk? Bus or light rail doesn’t pass through your neighborhood? Carpooling with coworkers, classmates, or friends can be a good option too! Consider sharing a ride with someone traveling to the same destination as a way to reduce your carbon footprint. This can help cut down on gasoline prices as well, making it a better alternative to driving yourself alone."
+  }
+]
