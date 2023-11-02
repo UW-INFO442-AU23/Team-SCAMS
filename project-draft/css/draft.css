@@ -20,6 +20,14 @@ body {
     border-color: #004903;;
 }
 
+.btn-outline-danger {
+    background-color: #006852;
+    border-color: #006852;
+}
+
+.quiz_answers {
+    border-color: ;
+}
 
 /* HOME PAGE STYLING */
 
@@ -50,6 +58,12 @@ body {
     background-position: top 100px center;
 }
 
+.quiz_question {
+    background-color: #002E68;
+    color: white;
+}
+
 .quiz_window {
-    background-color: #BFDAE3;
+    background-color: #F8F8F8;
+    max-width: 800px;
 }

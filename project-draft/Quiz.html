@@ -59,10 +59,10 @@
     <main>
         <h1 class="text-center">Knowledge Quiz</h1>
 
-        <div class="container">
+        <div class="container quiz_question">
             <div class="row">
-                <div class="col col-3">
-                    <h2>Question 1/4</h2>
+                <div class="col col-1">
+                    <h2>1. | </h2>
                 </div>
                 <div class="col">
                     <h3>How many people ride the light rail every day?</h3>
@@ -71,7 +71,28 @@
         </div>
 
         <div class="container rounded quiz_window">
-            hello
+            <p>A. around 81,000 people ride daily</p>
+
+            <p>B. around 78,000 people ride daily</p>
+
+            <p>C. around 93,000 people ride daily</p>
+
+            <p>D. around 64,000 people ride daily</p>
+        </div>
+
+        <div class="button_center">
+            <!-- what is the difference between name and id -->
+            <input type="radio" class="btn-check" name="question1" id="answer-a" autocomplete="off">
+            <label class="btn btn-outline-danger" for="answer-a">A</label>
+
+            <input type="radio" class="btn-check" name="question1" id="answer-b" autocomplete="off">
+            <label class="btn btn-outline-danger" for="answer-b">B</label>
+
+            <input type="radio" class="btn-check" name="question1" id="answer-c" autocomplete="off">
+            <label class="btn btn-outline-danger" for="answer-c">C</label>
+
+            <input type="radio" class="btn-check" name="question1" id="answer-d" autocomplete="off">
+            <label class="btn btn-outline-danger" for="answer-d">D</label>
         </div>
 
     </main>
