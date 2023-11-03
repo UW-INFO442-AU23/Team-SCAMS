@@ -18,9 +18,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 //import the function from the realtime database module
-import { getDatabase } from 'firebase/database';
+// import { getDatabase } from 'firebase/database';
 // Get a reference to the database service
-const db = getDatabase();
+// const db = getDatabase();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
