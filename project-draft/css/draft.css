@@ -51,17 +51,28 @@ h4 {
 
 /* HOME PAGE STYLING */
 
+h2, img {
+    /* this css ensures that each section in the home page is properly spaced out. the commented out code in the other sections are the un-consolidated version of this code. */
+    margin-top: 2rem;
+}
+
 .calculator-section h2 {
     color: #000000;
-    margin-top: -2rem;
+    /* margin-top: 2rem; */
     margin-bottom: 2.5rem;
 }
 
+/* .calculator-section img {
+    margin-top: 2rem;
+} */
+
 .quiz-section h2 {
+    /* margin-top: 2rem; */
     margin-bottom: 2.5rem;
 }
 
 .resources-section h2 {
+    /* margin-top: 2rem; */
     margin-bottom: 2.5rem;
 }
 
@@ -69,6 +80,16 @@ h4 {
 .callout_container {
     background-color: #E3EFE3;
     outline: 5px solid #006D04;
+}
+
+/* CALCULATOR PAGE STYLING */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+.form-content {
+    flex: 1;
+    margin-right: 20px; /* Adjust the margin as needed */
 }
 
 /* QUIZ PAGE STYLING */
