@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './components/Navbar.js';
+import NavbarComponent from './components/Navbar.js';
 import Home from './components/Home.js';
 import Quiz from './components/Quiz.js';
 import Calculator from './components/Calculator.js';
@@ -10,11 +10,13 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 export default function App (props) {
     return (
         <div>
-          <Router>
+          <NavbarComponent />
             <Routes>
-    
+                <Route path='/home' element={<Home/>}/>
+                <Route path='/emissions_calculator' element={<Calculator/>}/>
+                <Route path='/knowledge_quiz' element={<Quiz/>}/>
+                <Route path='/resources' element={<ResourcePage/>}/>
             </Routes>
-          </Router> 
         </div>
       );
 }
