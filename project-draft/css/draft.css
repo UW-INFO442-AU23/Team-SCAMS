@@ -14,13 +14,13 @@ h4 {
 }
 
 .btn-primary {
-    background-color: #006D04;
-    border-color: #006D04;
+    background-color: #006D04!important;
+    border-color: #006D04!important;
 }
 
 .btn-primary:hover {
-    background-color: #004903;
-    border-color: #004903;
+    background-color: #004903!important;
+    border-color: #004903!important;
 }
 
 /* .btn-primary: {
@@ -45,8 +45,14 @@ h4 {
 }
 
 .quiz_answers:active {
-    background-color: #006D04;
-    color: #F8F8F8;
+    background-color: #006D04!important;
+    color: #F8F8F8!important;
+}
+
+.btn-outline-success {
+    min-height: 120px;
+    min-width: 166px;
+    font-size: 5em;
 }
 
 /* HOME PAGE STYLING */
