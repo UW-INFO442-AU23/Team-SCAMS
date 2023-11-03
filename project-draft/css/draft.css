@@ -20,9 +20,14 @@ body {
     border-color: #004903;
 }
 
+/* .btn-primary: {
+    background-color: #004903;
+    border-color: #004903;
+} */
+
 /* is using min-height min-width a bad thing */
 .quiz_answers {
-    min-height: 20%;
+    min-height: 120px;
     min-width: 166px;
     background-color: #F8F8F8;
     color: #002E68;
@@ -32,8 +37,8 @@ body {
 }
 
 .quiz_answers:hover {
-    background-color: #F8F8F8;
-    color: #002E68;
+    background-color: #006D04;
+    color: #F8F8F8;
 }
 
 .quiz_answers:active {
@@ -65,7 +70,7 @@ body {
 
 /* QUIZ PAGE STYLING */
 .quiz_background {
-    background-image: url("../../public/busoutline.svg");
+    background-image: url("../../public/bus-outline.svg");
     background-repeat: no-repeat;
     background-position: top 100px center;
 }
@@ -75,7 +80,9 @@ body {
     background-color: #002E68;
     color: white;
     text-align: center;
-    max-width: 60%;
+    max-width: 943px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .quiz_window {
@@ -84,5 +91,6 @@ body {
     color: #002E68;
     font-weight: bold;
     padding: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 5em;
+    margin-top: 2em
 }
