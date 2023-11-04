@@ -129,20 +129,25 @@ h2, img {
 
 /* QUIZ RESULTS PAGE STYLING */
 .quiz-results-background {
-    background-image: url("../../public/test.png");
+    background-image: url("../../public/short bus outline.png");
     background-repeat: no-repeat;
-    background-position: top -125px center;
+    background-position: top -100px center;
 }
 
 .correct-answers, .your-score {
     margin-top: 20px;
-    max-width: 40%;
+    max-width: 420px;
+    padding: 15px;
+}
+
+.correct-answers > h4 {
+    margin-top: 25px;
 }
 
 .flex-container {
-    padding-bottom: 20%;
-    margin-left: 20%;
-    max-width: 70%;
+    padding-bottom: 20px;
+    margin-left: 325px;
+    max-width: 760px;
     display: flex;
-    gap: 30%;
+    gap: 120px;
 }
