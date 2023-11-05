@@ -99,12 +99,7 @@ h2, img {
 }
 
 /* QUIZ PAGE STYLING */
-.quiz_background {
-    background-image: url("../../public/bus outline.png");
-    background-repeat: no-repeat;
-    background-position: top -100px center;
-    padding-bottom: 200px;
-}
+
 
 .quiz_question {
     margin-top: 80px;
@@ -150,4 +145,14 @@ h2, img {
     max-width: 760px;
     display: flex;
     gap: 120px;
+}
+
+/* RESPONSIVE SIZING */
+@media (min-width: 1063px) {
+    .quiz_background {
+        background-image: url("../../public/bus outline.png");
+        background-repeat: no-repeat;
+        background-position: top -100px center;
+        padding-bottom: 200px;
+    }
 }
