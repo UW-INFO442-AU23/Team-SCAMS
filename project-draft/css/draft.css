@@ -14,13 +14,13 @@ h4 {
 }
 
 .btn-primary {
-    background-color: #006D04!important;
-    border-color: #006D04!important;
+    background-color: #006D04 !important;
+    border-color: #006D04 !important;
 }
 
 .btn-primary:hover {
-    background-color: #004903!important;
-    border-color: #004903!important;
+    background-color: #004903 !important;
+    border-color: #004903 !important;
 }
 
 /* .btn-primary: {
@@ -45,8 +45,8 @@ h4 {
 }
 
 .quiz_answers:active {
-    background-color: #006D04!important;
-    color: #F8F8F8!important;
+    background-color: #006D04 !important;
+    color: #F8F8F8 !important;
 }
 
 .btn-outline-success {
@@ -57,7 +57,8 @@ h4 {
 
 /* HOME PAGE STYLING */
 
-h2, img {
+h2,
+img {
     /* this css ensures that each section in the home page is properly spaced out. the commented out code in the other sections are the un-consolidated version of this code. */
     margin-top: 2rem;
 }
@@ -93,17 +94,21 @@ h2, img {
     display: flex;
     justify-content: space-between;
 }
+
 .form-content {
     flex: 1;
-    margin-right: 20px; /* Adjust the margin as needed */
+    margin-right: 20px;
+    /* Adjust the margin as needed */
 }
 
 /* QUIZ PAGE STYLING */
-.quiz_background {
-    background-image: url("../../public/bus outline.png");
-    background-repeat: no-repeat;
-    background-position: top -100px center;
-    padding-bottom: 200px;
+@media (min-width: 1063px) {
+    .quiz_background {
+        background-image: url("../../public/bus outline.png");
+        background-repeat: no-repeat;
+        background-position: top -100px center;
+        padding-bottom: 200px;
+    }
 }
 
 .quiz_question {
@@ -128,28 +133,37 @@ h2, img {
 }
 
 /* QUIZ RESULTS PAGE STYLING */
-.quiz-results-background {
-    background-image: url("../../public/short bus outline.png");
-    background-repeat: no-repeat;
-    background-position: top -100px center;
+@media (min-width: 1063px) {
+    .quiz-results-background {
+        background-image: url("../../public/short bus outline.png");
+        background-repeat: no-repeat;
+        background-position: top -100px center;
+    }
+
+    .flex-container {
+        padding-bottom: 20px;
+        max-width: 760px;
+        display: flex;
+        gap: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-.correct-answers, .your-score {
+.correct-answers,
+.your-score {
     margin-top: 20px;
     max-width: 420px;
     padding: 15px;
 }
 
-.correct-answers > h4 {
+.correct-answers>h4,
+.your-score>h3,
+.your-score>img {
     margin-top: 25px;
-}
-
-.flex-container {
-    padding-bottom: 20px;
-    margin-left: 325px;
-    max-width: 760px;
-    display: flex;
-    gap: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .photo-grid {
@@ -165,7 +179,7 @@ h2, img {
 
 @media (max-width: 768px) {
     .photo-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
