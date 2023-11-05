@@ -104,6 +104,53 @@
         <div class="button_center">
             <button type="button" class="btn btn-primary">Take The Quiz</button>
         </div>
+
+        <div className="d-flex px-4 py-4 justify-content-center">
+            <h2>Learn more through these resources below </h2>
+            <!-- Photo grid, add expand hover functionality to emphasize clickable-ness -->
+            <div class="photo-grid">
+                <div class="photo" id="01" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-opacity">
+                    <img src="img-draft/bikepic.png" alt="Bike">
+                </div>
+
+                <div class="photo">
+                    <img src="img-draft/buspic.png" alt="Bud driving">
+                </div>
+
+                <div class="photo">
+                    <img src="img-draft/driver.png" alt="Driver at the wheel">
+                </div>
+
+                <div class="photo">
+                    <img src="img-draft/limescoot.png" alt="Parked Lime scooters">
+                </div>
+
+                <div class="photo">
+                    <img src="img-draft/trainpic.png" alt="Link train departing">
+                </div>
+
+                <div class="photo">
+                    <img src="img-draft/walkingpic.png" alt="Pedestrians walking">
+                </div>
+               
+            </div>
+
+            <!-- Testing out modal functionality 
+
+                <div id="modal01" class="w3-modal w3-animate-zoom" onclick=this.style.display='none'">
+                    <div class="w3-modal-content">
+
+                        <header class="w3-container">
+                            <span onclick="document.getElementById('modal01').style.display='none'"
+                            class="w3-button w3-display-topright">&times;</span>
+                            <h2>Modal Header</h2>
+                        </header>
+                    
+                    </div>
+                </div>
+            -->
+
+        </div>
     </main>
 </body>
 

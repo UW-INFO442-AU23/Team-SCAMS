@@ -99,7 +99,12 @@ h2, img {
 }
 
 /* QUIZ PAGE STYLING */
-
+.quiz_background {
+    background-image: url("../../public/bus outline.png");
+    background-repeat: no-repeat;
+    background-position: top -100px center;
+    padding-bottom: 200px;
+}
 
 .quiz_question {
     margin-top: 80px;
@@ -147,12 +152,25 @@ h2, img {
     gap: 120px;
 }
 
-/* RESPONSIVE SIZING */
-@media (min-width: 1063px) {
-    .quiz_background {
-        background-image: url("../../public/bus outline.png");
-        background-repeat: no-repeat;
-        background-position: top -100px center;
-        padding-bottom: 200px;
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
     }
 }
