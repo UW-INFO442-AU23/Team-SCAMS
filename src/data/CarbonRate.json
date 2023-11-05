@@ -1,6 +1,30 @@
 [
   {
-    "transportation": "car",
-    "rate": "placeholder"
+    "transportation": "Walking",
+    "rate": "0"
+},
+{
+  "transportation": "Biking",
+  "rate": "0"
+},
+{
+  "transportation": "Link Light Rail (electricity)",
+  "rate": "0"
+},
+{
+  "transportation": "Train (Diesel)",
+  "rate": "19"
+},
+{
+  "transportation": "Carpool",
+  "rate": "74"
+},
+{
+  "transportation": "car",
+  "rate": "148"
+},
+{
+  "transportation": "Plane",
+  "rate": "123"
 }
 ]
