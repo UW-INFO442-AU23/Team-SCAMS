@@ -1,4 +1,4 @@
-# PROJECT NAME (TBD)
+# GoGreen
 ## Team 3 Scams
 Group Members: Sabrina Lin, Claire Lai, Alyson Yu, Mari Woodworth, Sarah Chu 
 
