@@ -5,6 +5,7 @@ import Quiz from './components/Quiz.js';
 import Calculator from './components/Calculator.js';
 import ResourcePage from './components/ResourcePage.js';
 // import ResourceCard from './components/ResourceCard.js';
+import QuizData from './data/Quiz.json'
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 
 export default function App (props) {
@@ -14,7 +15,7 @@ export default function App (props) {
             <Routes>
                 <Route path='/home' element={<Home/>}/>
                 <Route path='/emissions_calculator' element={<Calculator/>}/>
-                <Route path='/knowledge_quiz' element={<Quiz/>}/>
+                <Route path='/knowledge_quiz' element={<Quiz data={QuizData}/>}/>
                 <Route path='/resources' element={<ResourcePage/>}/>
             </Routes>
           <Footer/>
