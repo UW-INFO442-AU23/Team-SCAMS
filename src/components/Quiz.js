@@ -5,15 +5,15 @@ import { Container } from 'react-bootstrap';
 
 function QuizQuestion(props) {
 
-    const {quizData} = props
+    const {quizData, index} = props
 
     return (
         <div>
-            <div class="container quiz_question">
+            <div className="container quiz_question">
                 <h2>{quizData.question}</h2>
             </div>
 
-            <div class="container rounded quiz_window">
+            <div className="container rounded quiz_window">
                 <p>{quizData.a}</p>
 
                 <p>{quizData.b}</p>
@@ -22,18 +22,18 @@ function QuizQuestion(props) {
 
                 <p>{quizData.d}n</p>
             </div>
-            <div class="button_center">
-                <input type="radio" class="btn-check" name={quizData.id} id={quizData.id + 'a'} autocomplete="off" />
-                <label class="btn btn-outline-success" for="1a">A</label>
+            <div className="button_center">
+                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'a'} autoComplete="off" />
+                <label className="btn btn-outline-success" for={quizData.id + 'a'}>A</label>
 
-                <input type="radio" class="btn-check" name={quizData.id} id={quizData.id + 'b'} autocomplete="off" />
-                <label class="btn btn-outline-success" for="1b">B</label>
+                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'b'} autoComplete="off" />
+                <label className="btn btn-outline-success" for={quizData.id + 'b'}>B</label>
 
-                <input type="radio" class="btn-check" name={quizData.id} id={quizData.id + 'c'} autocomplete="off" />
-                <label class="btn btn-outline-success" for="1c">C</label>
+                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'c'} autoComplete="off" />
+                <label className="btn btn-outline-success" for={quizData.id + 'c'}>C</label>
 
-                <input type="radio" class="btn-check" name={quizData.id} id={quizData.id = 'd'} autocomplete="off" />
-                <label class="btn btn-outline-success" for="1d">D</label>
+                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'd'} autoComplete="off" />
+                <label className="btn btn-outline-success" for={quizData.id + 'd'}>D</label>
             </div>
         </div>
     )
@@ -57,19 +57,24 @@ export default function Quiz(props) {
 
     const {data} = props
     console.log(data)
-    const objKeys = Object.keys(data);
-    const quizQuestionArray = objKeys.map((quizObjKeys) => {
-        return data[quizObjKeys]
-    })
 
-    const questionArray = quizQuestionArray.map((question) => {
-        return <QuizQuestion quizData={question}/>
-    })
+    const questionArray = data.map((question, index) => {
+    return <QuizQuestion quizData={question} key={index}/>})
+
+
+    // const objKeys = Object.keys(data);
+    // const quizQuestionArray = objKeys.map((quizObjKeys) => {
+    //     return data[quizObjKeys]
+    // })
+
+    // const questionArray = quizQuestionArray.map((question) => {
+    //     return <QuizQuestion quizData={question}/>
+    // })
 
     return (
         <main>
             <h1 className="text-center">Knowledge Quiz</h1>
-            {quizQuestionArray}
+            {questionArray}
             <div className="button_center">
                 <button type="button" className="btn btn-primary my-5">Submit</button>
             </div>
