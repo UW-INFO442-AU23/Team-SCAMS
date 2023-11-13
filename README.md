@@ -3,14 +3,14 @@
 Group Members: Sabrina Lin, Claire Lai, Alyson Yu, Mari Woodworth, Sarah Chu 
 
 ## Our Mission
-Our mission is to encourage residents of Seattle to utilize more sustainable modes of daily transportation in order to reduce their carbon footprint. (write more)
+The transportation sector stands as the leading contributor to greenhouse gas emissions, accounting for 28% of total emissions in 2021 (Sources of greenhouse gas emissions | US EPA 2021). Our web application is focused around [UN Sustainable Goal 13]([url](https://sdgs.un.org/goals/goal13)): Climate Action. According to Goal 13, we need to take action to combat climate change through policies and education. Our mission is to encourage residents of Seattle to utilize more sustainable modes of daily transportation in order to reduce their carbon footprint. Thus, our **How Might We** statement is: How might we encourage residents of Seattle to utilize more sustainable modes of transportation in order to reduce their carbon footprint?  
 
 ## GitHub Links
 GitHub Repo link: https://github.com/UW-INFO442-AU23/team-scams
 GitHub Pages link:
 
 ## Key Features
-* Carbon Emissions Calculator 
+* Carbon Emissions Calculator
 * Interactive Transportation Knowledge Quiz
 * Resources Page
 * Scores/Results and Correct Answer for Knowledge Quiz
@@ -73,3 +73,4 @@ Test Scenario: User takes knowledge quiz
 
 ## References
 [insert references here]
+_Sources of greenhouse gas emissions_ | US EPA. (n.d.). https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions
