@@ -108,8 +108,7 @@ img {
     .quiz_background {
         background-image: url("../public/bus outline.png");
         background-repeat: no-repeat;
-        background-position: top -100px center;
-        padding-bottom: 200px;
+        background-position: top -250px center;
     }
 }
 
