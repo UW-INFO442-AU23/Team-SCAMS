@@ -19,7 +19,6 @@ function QuizResult(props) {
     //     }
     // });
 
-
     return (
         <div>
             <div>
@@ -87,7 +86,7 @@ function QuizResult(props) {
 
 function QuizQuestion(props) {
 
-    const {quizData, index} = props
+    const { quizData, index } = props
 
     return (
         <div>
@@ -102,7 +101,7 @@ function QuizQuestion(props) {
 
                 <p>{quizData.c}</p>
 
-                <p>{quizData.d}n</p>
+                <p>{quizData.d}</p>
             </div>
             <div className="button_center">
                 <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'a'} autoComplete="off" />
@@ -121,10 +120,6 @@ function QuizQuestion(props) {
     )
 }
 
-
-
-
-
 function QuizWindow(props) {
 
 }
@@ -137,11 +132,12 @@ function QuizAnswers(props) {
 export default function Quiz(props) {
     <Route path="/Quiz" element={<Quiz />} />
 
-    const {data} = props
+    const { data } = props
     console.log(data)
 
     const questionArray = data.map((question, index) => {
-    return <QuizQuestion quizData={question} key={index}/>})
+        return <QuizQuestion quizData={question} key={index} />
+    })
 
 
     // const objKeys = Object.keys(data);
@@ -156,7 +152,9 @@ export default function Quiz(props) {
     return (
         <main>
             <h1 className="text-center">Knowledge Quiz</h1>
+            <div className='quiz_background'>
             {questionArray}
+            </div>
             <div className="button_center">
                 <button type="button" className="btn btn-primary my-5">Submit</button>
             </div>
