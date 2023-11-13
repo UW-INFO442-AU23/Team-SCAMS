@@ -27,7 +27,7 @@ export function KeyFeatures(props) {
     return (
         <>
             <EachFeature
-                source="img/car.png"
+                source="img/car.jpg"
                 alt="White SUV driving fast"
                 name="Carbon Emissions Calculator"
                 description="The transportation sector stands as the leading contributor to 
@@ -38,7 +38,7 @@ export function KeyFeatures(props) {
                 path="emissions_calculator"
             />
             <EachFeature 
-                source="img/bus.png"
+                source="img/bus.jpg"
                 alt="People walking out of a bus"
                 name="Transportation Knowledge Quiz"
                 description="How much do you know about sustainable modes of transportation 
@@ -47,7 +47,7 @@ export function KeyFeatures(props) {
                 path="knowledge_quiz"
             />
             <EachFeature
-                source="img/readingbook.png"
+                source="img/readingbook.jpg"
                 alt="Woman reading a book and holding a cup of coffee"
                 name="Resources"
                 description="Want to find relevant information and resources about how you can 
