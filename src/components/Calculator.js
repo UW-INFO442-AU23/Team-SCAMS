@@ -11,7 +11,14 @@ export default function Calculator(props) {
     <main>
       <div className="container">
         <h1>Check Your Carbon Emissions</h1>
-        <Calculating setCalculatingCallback={setCalculateResult} />
+        <div className="row align-items-start">
+          <div className="col">
+            <Calculating setCalculatingCallback={setCalculateResult} />
+          </div>
+          <div className='col'>
+            <img src="#" alt="#" width="200" />
+          </div>
+        </div>
       </div>
     </main>
   )
@@ -44,9 +51,9 @@ function Calculating(props) {
   }
 
 
-  function DropdownMenu () {
+  function DropdownMenu() {
     let transportationModes = [];
-    for (var i=0; i<Data.length; i++) {
+    for (var i = 0; i < Data.length; i++) {
       //console.log(Data[i].transportation)
       transportationModes.push(Data[i].transportation)
     }
@@ -57,38 +64,35 @@ function Calculating(props) {
         <option value={option}>{option}</option>
       )
     }
-    
+
     return (
       <div className="form-group">
-      <label for="transportation-options">How will you get there?</label>
-      <select id="transportation-options" name="transportation-options" className="form-control" required>
-      {options}
-      </select>
-    </div>
+        <label for="transportation-options">How will you get there?</label>
+        <select id="transportation-options" name="transportation-options" className="form-control" required>
+          {options}
+        </select>
+      </div>
     )
   }
 
-  return(
+  return (
     <div className="form-container">
-    <div className="form-content">
-      <form action="CalculatorResult.html" method="post">
-        
-        <section className="form-group">
-          <label for="mileage">How far are you traveling? (in Miles)</label>
-          <input type="text" id="mileage" name="mileage" className="form-control" required />
-        </section>
+      <div className="form-content">
+        <form action="CalculatorResult.html" method="post">
 
-        <DropdownMenu />
+          <section className="form-group">
+            <label for="mileage">How far are you traveling? (in Miles)</label>
+            <input type="text" id="mileage" name="mileage" className="form-control" required />
+          </section>
 
-        <div className="form-group">
-          <button aria-label="Submit" className="btn btn-primary" type="submit">See Results</button>
-        </div>
-      </form>
+          <DropdownMenu />
+
+          <div className="form-group">
+            <button aria-label="Submit" className="btn btn-primary" type="submit">See Results</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div>
-      <img src="#" alt="#" width="200" />
-    </div>
-  </div>
   )
 }
 
