@@ -26,7 +26,7 @@ export default function App (props) {
 function Footer() {
   return (
     <footer className="bg-light my-0 py-0">
-      <div className="contact-info text-center">
+      <div className="footer contact-info text-center">
         <p>&copy; INFO 464 Group SCAMS 2023</p>
       </div>
     </footer>
