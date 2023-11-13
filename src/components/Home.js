@@ -4,6 +4,9 @@ import { KeyFeatures } from "./HomePageSection";
 
 export default function Home(props) {
     <Route path="/Home" element={<Home/>} />
+    return (
+        <HomePage/>
+    )
 }
 
 export function HomePage(props) {
@@ -20,7 +23,7 @@ export function HomePage(props) {
                                     daily transportation in order to reduce their carbon footprint. Check out our carbon 
                                     emissions calculator to see how you can utilize more sustainable travel!
                                 </p>
-                                <a class="btn btn-primary" href="#" role="button">Carbon Emissions Calculator</a>
+                                <a class="btn btn-primary" href="emissions_calculator" role="button">Carbon Emissions Calculator</a>
                             </div>
                         </div>
                     
