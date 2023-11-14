@@ -4,7 +4,6 @@ import Home from './components/Home.js';
 import Quiz from './components/Quiz.js';
 import Calculator from './components/Calculator.js';
 import ResourcePage from './components/ResourcePage.js';
-// import ResourceCard from './components/ResourceCard.js';
 import QuizData from './data/Quiz.json'
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 
@@ -27,7 +26,7 @@ function Footer() {
   return (
     <footer className="bg-light my-0 py-0">
       <div className="footer contact-info text-center">
-        <p>&copy; INFO 464 Group SCAMS 2023</p>
+        <p>&copy; INFO 442 Group SCAMS 2023</p>
       </div>
     </footer>
   )
