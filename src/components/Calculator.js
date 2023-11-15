@@ -14,6 +14,7 @@ export default function Calculator(props) {
         <div className="row align-items-start">
           <div className="col">
             <Calculating setCalculatingCallback={setCalculateResult} />
+            <a href="https://www.iea.org/data-and-statistics/charts/well-to-wheel-wake-wing-ghg-intensity-of-motorised-passenger-transport-modes-2">Data source </a>
           </div>
           <div className='col'>
             <img src="#" alt="#" width="200" />
