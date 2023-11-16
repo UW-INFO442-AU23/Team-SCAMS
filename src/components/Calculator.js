@@ -17,7 +17,7 @@ export default function Calculator(props) {
             <a href="https://www.iea.org/data-and-statistics/charts/well-to-wheel-wake-wing-ghg-intensity-of-motorised-passenger-transport-modes-2">Data source </a>
           </div>
           <div className='col'>
-            <img src="#" alt="#" width="200" />
+            <img src="img/lightrail.png" alt="Washington State Lightrail" width="400px" />
           </div>
         </div>
       </div>

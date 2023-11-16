@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import { KeyFeatures } from "./HomePageSection";
+import { KeyFeatures, AboutUs } from "./HomePageSection";
 
 export default function Home(props) {
     <Route path="/Home" element={<Home/>} />
@@ -21,9 +21,10 @@ export function HomePage(props) {
                                 <p>
                                     Our mission is to encourage residents of Seattle to utilize more sustainable modes of
                                     daily transportation in order to reduce their carbon footprint. Check out our carbon 
-                                    emissions calculator to see how you can utilize more sustainable travel!
+                                    emissions calculator, transportation knowledge quiz, and resources page to learn more
+                                    about sustainable travel!
                                 </p>
-                                <a class="btn btn-primary" href="emissions_calculator" role="button">Carbon Emissions Calculator</a>
+                                <a class="btn btn-primary" href="#" role="button">Learn More</a>
                             </div>
                         </div>
                     
@@ -38,7 +39,16 @@ export function HomePage(props) {
                     </div>
                 </div>
             </section>
-            <KeyFeatures />
+
+            <section className="feature-section">
+                <h2> Learn More About Sustainable Transportation! </h2>
+                <KeyFeatures />
+            </section>
+
+            <section className="about-us">
+                <h2>Meet the Team</h2>
+                <AboutUs />
+            </section>
         </div>
     );
 }

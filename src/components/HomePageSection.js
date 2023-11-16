@@ -2,7 +2,7 @@ import React from 'react';
 
 function EachFeature(props) {
     return (
-        <section className="feature-section">
+        <section>
             <div className="container">
                 <div className="row justify-content-between text-left align-items-center">
                     <div className="homepage-img col-md">
@@ -10,7 +10,7 @@ function EachFeature(props) {
                             alt={props.alt} class="img-fluid"/>
                     </div>
                     <div className="col-md p-4">
-                        <h2>{props.name}</h2>
+                        <h3>{props.name}</h3>
                         <p>{props.description}</p>
                         <a className="btn btn-primary" href={props.path} role="button" onClick={props.onClick}>
                             {props.buttonname}
@@ -51,10 +51,60 @@ export function KeyFeatures(props) {
                 alt="People walking out of a bus"
                 name="Transportation Knowledge Quiz"
                 description="How much do you know about sustainable modes of transportation 
-                in the Seattle area? Take our knowledge quiz to find out!"
+                in the Seattle area? Take our knowledge quiz to find out! Be sure to check out
+                out resources page for some hints to help you solve the quiz."
                 buttonname="Take the Quiz"
                 path="knowledge_quiz"
             />
         </>
+    );
+}
+
+function EachPerson(props) {
+    return (
+        <section className="about-us-section">
+            <div className="team-member">
+                <img src={props.source} alt={props.alt} />
+                <h3>{props.name}</h3>
+                <p>{props.role}</p>
+            </div>
+        </section>
+    )
+}
+
+export function AboutUs(props) {
+    return (
+        <div className="about-us-container">
+            <EachPerson
+                source="img/team-members/sabrina.jpg"
+                alt="Sabrina Lin, one of the creators of this web app"
+                name="Sabrina Lin"
+                role="Project Manager & Developer"
+            />
+            <EachPerson
+                source="img/driver.png"
+                alt="Claire Lai, one of the creators of this web app"
+                name="Claire Lai"
+                role="UX Designer & Developer"
+            />
+            <EachPerson
+                source="img/driver.png"
+                alt="Alyson Yu, one of the creators of this web app"
+                name="Alyson Yu"
+                role="Project Manager & Developer"
+            />
+            <EachPerson
+                source="img/driver.png"
+                alt="Mari Woodworth, one of the creators of this web app"
+                name="Mari Woodworth"
+                role="UX Designer & Developer"
+            />
+            <EachPerson
+                source="img/driver.png"
+                alt="Sarah Chu, one of the creators of this web app"
+                name="Sarah Chu"
+                role="UX Researcher & Developer"
+            />
+        </div>
     );
 }
