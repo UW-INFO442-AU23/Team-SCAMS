@@ -100,7 +100,7 @@ export function AboutUs(props) {
                 role="UX Designer & Developer"
             />
             <EachPerson
-                source="img/driver.png"
+                source="img/team-members/sarah.png"
                 alt="Sarah Chu, one of the creators of this web app"
                 name="Sarah Chu"
                 role="UX Researcher & Developer"
