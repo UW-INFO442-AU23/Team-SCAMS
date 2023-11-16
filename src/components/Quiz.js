@@ -55,10 +55,10 @@ function QuizResult(props) {
                     <a href="https://www.health.harvard.edu/heart-health/step-up-your-walking-game">Click to read the Harvard study.</a>
 
                     <h4>
-                        Q3: True or false?: Carbon Monoxide is the most prevalent greenhouse gas.
+                        Q3: What is the most prevalent greenhouse gas?
                     </h4>
                     <p>
-                        Answer: B. False
+                        Answer: B. Carbon Dioxide
                     </p>
                     <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">It's carbon dioxide!</a>
 
