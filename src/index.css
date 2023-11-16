@@ -81,30 +81,15 @@ h4 {
 
 /* HOME PAGE STYLING */
 
-h2,
-img {
+.homepage-img {
     /* this css ensures that each section in the home page is properly spaced out. the commented out code in the other sections are the un-consolidated version of this code. */
     margin-top: 2rem;
 }
 
-.calculator-section h2 {
+.feature-section h2 {
     color: #000000;
-    /* margin-top: 2rem; */
-    margin-bottom: 2.5rem;
-}
-
-/* .calculator-section img {
-    margin-top: 2rem;
-} */
-
-.quiz-section h2 {
-    /* margin-top: 2rem; */
-    margin-bottom: 2.5rem;
-}
-
-.resources-section h2 {
-    /* margin-top: 2rem; */
-    margin-bottom: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 
 /* RESOURCE PAGE STYLING */
