@@ -18,7 +18,7 @@ export function HomePage(props) {
                         <div class="col-md">
                             <div class="intro-text">
                                 <h1>Go Green</h1>
-                                <p>
+                                <p className="homepage-descrip">
                                     Our mission is to encourage residents of Seattle to utilize more sustainable modes of
                                     daily transportation in order to reduce their carbon footprint. Check out our carbon 
                                     emissions calculator, transportation knowledge quiz, and resources page to learn more

@@ -11,7 +11,7 @@ function EachFeature(props) {
                     </div>
                     <div className="col-md p-4">
                         <h3>{props.name}</h3>
-                        <p>{props.description}</p>
+                        <p className="homepage-descrip">{props.description}</p>
                         <a className="btn btn-primary" href={props.path} role="button" onClick={props.onClick}>
                             {props.buttonname}
                         </a>
