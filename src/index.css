@@ -26,13 +26,31 @@ img {
     color: #006D04
 }
 
-.navbar-nav .nav-link:active {
+/* .navbar-nav .nav-link:active {
     color: #006D04
 }
 
 .nav_click:active {
     color: #006D04 !important
-}
+} */
+
+
+
+/* .nav-link.active {
+    color: #006D04;
+} */
+
+/* .nav-bar .nav-link.active {
+    background-color: #006D04;
+  } */
+
+   Nav.Link .navbar-link {
+    color: aqua;
+  }  
+
+  .navbar-nav > .nav-link.active {
+    color: #006D04;
+  }
 
 /* BUTTON STYLING */
 .button_center {
