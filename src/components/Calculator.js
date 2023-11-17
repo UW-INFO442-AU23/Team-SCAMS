@@ -5,7 +5,6 @@ import Data from '../data/CarbonRate.json';
 
 export default function Calculator(props) {
   <Route path="/Calculator" element={<Calculator />} />
-  const [CalculateResult, setCalculateResult] = useState([]);
 
   return (
     <main>
@@ -13,11 +12,13 @@ export default function Calculator(props) {
         <h1>Check Your Carbon Emissions</h1>
         <div className="row align-items-start">
           <div className="col">
-            <Calculating setCalculatingCallback={setCalculateResult} />
-            <a href="https://www.iea.org/data-and-statistics/charts/well-to-wheel-wake-wing-ghg-intensity-of-motorised-passenger-transport-modes-2">Data source </a>
+            <Calculating />
+            <p>Check our data source
+              <a href="https://www.iea.org/data-and-statistics/charts/well-to-wheel-wake-wing-ghg-intensity-of-motorised-passenger-transport-modes-2" target="_blank"> here </a>
+            </p>
           </div>
           <div className='col'>
-            <img src="img/lightrail.png" alt="Washington State Lightrail" width="400px" />
+            <Result />
           </div>
         </div>
       </div>
@@ -26,70 +27,72 @@ export default function Calculator(props) {
 }
 
 
-// implement calculating feature here
+// implement calculating feature on the left side of the page
 function Calculating(props) {
-  const [inputMiles, setInputMiles] = useState("")
-  const [inputTransportation, setInputTransportation] = useState("")
+  const [miles, setMiles] = useState("")
+  const [transportation, setTransportation] = useState("Walk")
 
-  const handleMilesChange = (event) => {
-    let inputValue = event.target.value;
-    setInputMiles(inputValue)
-    console.log(inputMiles)
-  }
-
-  const handleTransportationChange = (event) => {
-    let inputValue = event.target.value;
-    setInputTransportation(inputValue)
-    console.log(inputTransportation)
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("submitting", inputMiles);
-    CalculatingCallback()
-    setInputMiles("") //empty the input
-    setInputTransportation("") //empty the input
-  }
-
-
+  // get mode of transportation from dataset for the dropdown menu
   function DropdownMenu() {
     let transportationModes = [];
     for (var i = 0; i < Data.length; i++) {
-      //console.log(Data[i].transportation)
       transportationModes.push(Data[i].transportation)
     }
-    //console.log(transportationModes)
     let options = transportationModes.map(optionFunction)
     function optionFunction(option) {
       return (
         <option value={option}>{option}</option>
       )
     }
-
     return (
       <div className="form-group">
         <label for="transportation-options">How will you get there?</label>
-        <select id="transportation-options" name="transportation-options" className="form-control" required>
+        <select id="transportation-options" name="transportation-options" className="form-control" onChange={handleTransportationChange} required>
           {options}
         </select>
       </div>
     )
   }
 
+  const handleMilesChange = (event) => {
+    let inputValue = event.target.value;
+    setMiles(inputValue)
+    console.log(inputValue)
+  }
+
+  const handleTransportationChange = (event) => {
+    let inputValue = event.target.value;
+    setTransportation(inputValue)
+    console.log(inputValue)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("submitting", miles, transportation);
+    calculatingCallback()
+    //setMiles("") //empty the input
+    //setTransportation("Walk") //default the input
+  }
+
+  function calculatingCallback() {
+    let carbonEmission = [];
+    for (var i = 0; i < Data.length; i++) {
+      carbonEmission.push(Data[i].rate * miles)
+    }
+    console.log(carbonEmission)
+  }
+
   return (
     <div className="form-container">
       <div className="form-content">
-        <form action="CalculatorResult.html" method="post">
-
+        <form>
           <section className="form-group">
             <label for="mileage">How far are you traveling? (in Miles)</label>
-            <input type="text" id="mileage" name="mileage" className="form-control" required />
+            <input type="text" id="mileage" name="mileage" className="form-control" onChange={handleMilesChange} required />
           </section>
-
           <DropdownMenu />
-
           <div className="form-group">
-            <button aria-label="Submit" className="btn btn-primary" type="submit">See Results</button>
+            <button aria-label="Submit" className="btn btn-primary" onClick={handleSubmit} >See Results</button>
           </div>
         </form>
       </div>
@@ -97,10 +100,14 @@ function Calculating(props) {
   )
 }
 
-function CalculatingCallback() {
-  console.log(Data)
+// implement the result on the right side of the page
+function Result(props) {
+  let miles = props.miles;
+  let transportation = props.transportation
 
   return (
-    console.log("hello")
+    <div className='container bg-light'>
+      <img src="img/lightrail.png" alt="Washington State Lightrail" width="700px" />
+    </div>
   )
 }
