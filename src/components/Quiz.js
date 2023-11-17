@@ -170,10 +170,12 @@ export default function Quiz(props) {
 
 
     return (
-        <main>
-            <div className='quiz_background'>
+        <main className='quiz_background'>
+            <div>
+            <div>
                 <h1 className="text-center">Knowledge Quiz</h1>
                 {questionArray}
+            </div>
             </div>
             <button type="button" className="btn btn-primary my-5" onClick={() => setShow(!show)}>
                 {show ? "Hide" : "View"} results
