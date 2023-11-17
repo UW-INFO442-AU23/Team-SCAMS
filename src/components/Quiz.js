@@ -3,22 +3,28 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 
 
 function QuizResult(props) {
-    const { answers } = props
+    const { QuizData, answers } = props
+
+    // array for matching user answers to correct answers
     const correct = ["Q1c", "Q2c", "Q3b", "Q4d", "Q5a"]
     let count = 0
+    // array of user answer values
     const answers_array = Object.values(answers)
 
+    // array of user answer values as letter choice only
+    const letter_answers = answers_array.map((answers_array)=>answers_array[2])
+    // array of user answer choices as full option -- how to make this work????
+    // const full_answers = letter_answers.map((letter_answers)=>QuizData[letter_answers])
+
+    // calculating user score
     for (let i = 0; i < answers_array.length; i++) {
         for (let k = 0; k < correct.length; k++) {
             if (answers_array[i] === correct[k]) {
                 count += 1
-                console.log(count)
             }
         }
     }
-
     const result = count / correct.length
-    console.log(result);
 
     return (
         <div style={{ visibility: props.status ? "visible" : "hidden" }}>
@@ -44,6 +50,9 @@ function QuizResult(props) {
                     <p>
                         Answer: C. Northgate and Angle Lake
                     </p>
+                    <p>
+                        You said: {letter_answers[0]}
+                    </p>
                     <a href="https://www.soundtransit.org/ride-with-us/stations/link-light-rail-stations">Want more info on the available stations? Find out here!</a>
 
                     <h4>
@@ -51,6 +60,9 @@ function QuizResult(props) {
                     </h4>
                     <p>
                         Answer: C. 8,000 steps
+                    </p>
+                    <p>
+                        You said: {letter_answers[1]}
                     </p>
                     <a href="https://www.health.harvard.edu/heart-health/step-up-your-walking-game">Click to read the Harvard study.</a>
 
@@ -60,6 +72,9 @@ function QuizResult(props) {
                     <p>
                         Answer: B. Carbon Dioxide
                     </p>
+                    <p>
+                        You said: {letter_answers[2]}
+                    </p>
                     <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">It's carbon dioxide!</a>
 
                     <h4>
@@ -67,6 +82,9 @@ function QuizResult(props) {
                     </h4>
                     <p>
                         Answer: D. 400,000
+                    </p>
+                    <p>
+                        You said: {letter_answers[3]}
                     </p>
                     <a href="https://en.wikipedia.org/wiki/King_County_Metro#cite_note-METRO_Mag_Survey-3">Read the King County Metro's Wiki page!</a>
 
@@ -76,6 +94,9 @@ function QuizResult(props) {
                     </h4>
                     <p>
                         Answer: A. 35%
+                    </p>
+                    <p>
+                        You said: {letter_answers[4]}
                     </p>
                     <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">Where we got this stat:</a>
                 </div>
