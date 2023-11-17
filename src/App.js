@@ -6,6 +6,8 @@ import Calculator from './components/Calculator.js';
 import ResourcePage from './components/ResourcePage.js';
 import QuizData from './data/Quiz.json'
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 
 export default function App(props) {
   return (
@@ -25,8 +27,9 @@ export default function App(props) {
 
 function Footer() {
   return (
-    <footer className="bg-light my-0 py-0">
-      <div className="footer contact-info text-center">
+    <footer className="bg-light my-0 py-0 footer">
+      <NavbarComponent/>
+      <div className="text-center">
         <p>&copy; INFO 442 Group SCAMS 2023</p>
       </div>
     </footer>
