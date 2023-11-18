@@ -9,12 +9,19 @@ function QuizResult(props) {
     const correct = ["Q1c", "Q2c", "Q3b", "Q4d", "Q5a"]
     let count = 0
     // array of user answer values
-    const answers_array = Object.values(answers)
+    const answers_array = Object.values(answers).sort()
 
     // array of user answer values as letter choice only
     const letter_answers = answers_array.map((answers_array)=>answers_array[2])
+
+    const index_num = answers_array.map((answers_array)=>{
+        return answers_array[1] - 1
+    })
+
     // array of user answer choices as full option -- how to make this work????
-    // const full_answers = letter_answers.map((letter_answers)=>QuizData[letter_answers])
+    const full_answers = letter_answers.map((letter_answers, index_num)=>QuizData[index_num][letter_answers])
+
+    // console.log(QuizData[1]["c"])
 
     // calculating user score
     for (let i = 0; i < answers_array.length; i++) {
@@ -51,7 +58,7 @@ function QuizResult(props) {
                         Answer: C. Northgate and Angle Lake
                     </p>
                     <p>
-                        You said: {letter_answers[0]}
+                        You said: {full_answers[0]}
                     </p>
                     <a href="https://www.soundtransit.org/ride-with-us/stations/link-light-rail-stations">Want more info on the available stations? Find out here!</a>
 
@@ -62,7 +69,7 @@ function QuizResult(props) {
                         Answer: C. 8,000 steps
                     </p>
                     <p>
-                        You said: {letter_answers[1]}
+                        You said: {full_answers[1]}
                     </p>
                     <a href="https://www.health.harvard.edu/heart-health/step-up-your-walking-game">Click to read the Harvard study.</a>
 
@@ -73,7 +80,7 @@ function QuizResult(props) {
                         Answer: B. Carbon Dioxide
                     </p>
                     <p>
-                        You said: {letter_answers[2]}
+                        You said: {full_answers[2]}
                     </p>
                     <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">It's carbon dioxide!</a>
 
@@ -81,10 +88,10 @@ function QuizResult(props) {
                         Q4: King County Metro carries over ___ passengers daily.
                     </h4>
                     <p>
-                        Answer: D. 400,000
+                        Answer: D. 400,000 passengers
                     </p>
                     <p>
-                        You said: {letter_answers[3]}
+                        You said: {full_answers[3]}
                     </p>
                     <a href="https://en.wikipedia.org/wiki/King_County_Metro#cite_note-METRO_Mag_Survey-3">Read the King County Metro's Wiki page!</a>
 
@@ -96,7 +103,7 @@ function QuizResult(props) {
                         Answer: A. 35%
                     </p>
                     <p>
-                        You said: {letter_answers[4]}
+                        You said: {full_answers[4]}
                     </p>
                     <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">Where we got this stat:</a>
                 </div>
@@ -177,10 +184,12 @@ export default function Quiz(props) {
                 {questionArray}
             </div>
             </div>
+            <div className='button_center'>
             <button type="button" className="btn btn-primary my-5" onClick={() => setShow(!show)}>
                 {show ? "Hide" : "View"} results
             </button>
-            <QuizResult answers={answers} status={show} />
+            </div>
+            <QuizResult answers={answers} status={show} QuizData={data} />
         </main>
     )
 
