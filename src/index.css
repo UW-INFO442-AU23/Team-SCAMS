@@ -34,7 +34,13 @@ img {
     color: #006D04;
   }
 
-/* BUTTON STYLING */
+/* FOOTER STYLING */
+.footer_link {
+    text-decoration: none;
+    color: #000000;
+}
+
+  /* BUTTON STYLING */
 .button_center {
     text-align: center;
 }
