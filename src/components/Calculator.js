@@ -9,9 +9,9 @@ export default function Calculator(props) {
   return (
     <main>
       <div className="container">
-        <h1>Check Your Carbon Emissions</h1>
         <div className="row align-items-start">
           <div className="col">
+            <h1 className='pb-2'>Check Your Carbon Emissions</h1>
             <Calculating />
             <p>Check our data source
               <a href="https://www.iea.org/data-and-statistics/charts/well-to-wheel-wake-wing-ghg-intensity-of-motorised-passenger-transport-modes-2" target="_blank"> here </a>
