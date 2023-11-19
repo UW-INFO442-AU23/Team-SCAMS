@@ -13,6 +13,7 @@ export default function Home(props) {
 
 export function HomePage(props) {
 
+    // Anchor Link Smooth Scroll Function
     // Source: https://stackoverflow.com/questions/13735912/anchor-jumping-by-using-javascript
     // Source: https://jsfiddle.net/DerekL/x3edvp4t/
     function jump(h) {
@@ -84,6 +85,7 @@ export function HomePage(props) {
 }
 
 
+// Animation for Anchor Link Smooth Scroll Function jump()
 // Source: https://stackoverflow.com/questions/13735912/anchor-jumping-by-using-javascript
 // Source: https://jsfiddle.net/DerekL/x3edvp4t/
 // Animator Licensed under the MIT License
