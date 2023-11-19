@@ -49,7 +49,7 @@ export function HomePage(props) {
                                 </p>
 
                                 <button className="btn btn-primary" onClick={() => jump('one')}>
-                                    Learn More About Sustainable Transportation
+                                    Learn More
                                 </button>
 
                                 {/* <button className="btn btn-primary" onclick="jump('one')">Learn More About Sustainable Transportation</button> */}
