@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavbarComponent from './components/Navbar.js';
 import Home from './components/Home.js';
 import Quiz from './components/Quiz.js';
-import QuizResults from './components/Quiz.js';
+import QuizResults from './components/QuizResults.js';
 import Calculator from './components/Calculator.js';
 import ResourcePage from './components/ResourcePage.js';
 import QuizData from './data/Quiz.json'
@@ -12,6 +12,11 @@ import { Container } from 'react-bootstrap';
 
 
 export default function App(props) {
+  const [userAnswer, setUserAnswer] = useState(null);
+  const handleSubmit = (answers) => {
+    setUserAnswer(answers)
+  };
+  
   return (
     <div>
       <NavbarComponent />
@@ -19,7 +24,8 @@ export default function App(props) {
         <Route path='*' element={<Navigate to='/home' />} />
         <Route path='/home' element={<Home />} />
         <Route path='/emissions_calculator' element={<Calculator />} />
-        <Route path='/knowledge_quiz' element={<Quiz data={QuizData} />} />
+        <Route path='/knowledge_quiz' element={<Quiz data={QuizData} onSubmit={handleSubmit}/>} />
+        <Route path='/knowledge_quiz_results' element={<QuizResults data={QuizData} answers={userAnswer}/>} />
         <Route path='/resources' element={<ResourcePage />} />
       </Routes>
       <Footer />
@@ -33,7 +39,7 @@ function Footer() {
       <div className='container'>
         <div className='row align-items-end'>
           <div className='col-3'>
-            <img src="logo.png" alt="go green logo" width="150" height="150" />
+            <img src="logo.png" alt="go green logo" width="160" height="90" />
             <p>&copy; INFO 442 Group SCAMS 2023</p>
           </div>
           <div className='col'>

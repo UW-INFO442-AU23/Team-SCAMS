@@ -180,7 +180,7 @@ Nav.Link .navbar-link {
     .quiz_background {
         background-image: url("../public/long bus outline.png");
         background-repeat: no-repeat;
-        background-position: top -200px center;
+        background-position: top -225px center;
     }
 }
 
@@ -197,8 +197,6 @@ Nav.Link .navbar-link {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
-
 
 .quiz_window {
     background-color: #F8F8F8;
@@ -279,5 +277,5 @@ Nav.Link .navbar-link {
 /* FOOTER STYLING */
 .footer {
     padding-top: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
