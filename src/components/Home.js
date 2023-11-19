@@ -4,29 +4,29 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import { KeyFeatures, AboutUs } from "./HomePageSection";
 
 export default function Home(props) {
-    <Route path="/Home" element={<Home/>} />
+    <Route path="/Home" element={<Home />} />
     return (
-        <HomePage/>
+        <HomePage />
     )
 }
 
 
 export function HomePage(props) {
-    
+
     // Source: https://stackoverflow.com/questions/13735912/anchor-jumping-by-using-javascript
     // Source: https://jsfiddle.net/DerekL/x3edvp4t/
     function jump(h) {
         var top = document.getElementById(h).offsetTop,
             left = document.getElementById(h).offsetLeft;
         var animator = createAnimator({
-            start: [0,0],
+            start: [0, 0],
             end: [left, top],
             duration: 1000
-        }, function(vals){
+        }, function (vals) {
             console.log(arguments);
             window.scrollTo(vals[0], vals[1]);
         });
-        
+
         //run
         animator();
     }
@@ -42,7 +42,7 @@ export function HomePage(props) {
                                 <h1>Go Green</h1>
                                 <p className="homepage-descrip">
                                     Our mission is to encourage residents of Seattle to utilize more sustainable modes of
-                                    daily transportation in order to reduce their carbon footprint. Check out our carbon 
+                                    daily transportation in order to reduce their carbon footprint. Check out our carbon
                                     emissions calculator, transportation knowledge quiz, and resources page to learn more
                                     about sustainable travel!
                                 </p>
@@ -50,12 +50,12 @@ export function HomePage(props) {
                                 <button className="btn btn-primary" onClick={() => jump('one')}>
                                     Learn More About Sustainable Transportation
                                 </button>
-                            
+
                                 {/* <button className="btn btn-primary" onclick="jump('one')">Learn More About Sustainable Transportation</button> */}
                                 {/* <a className="btn btn-primary" href="#" role="button">Learn More About Sustainable Transportation</a> */}
                             </div>
                         </div>
-                    
+
                         {/* Source: https://getbootstrap.com/docs/4.0/utilities/embed/ */}
                         <div className="col-md embed-responsive embed-responsive-16by9">
                             {/*Source: https://www.w3schools.com/html/html_youtube.asp*/}

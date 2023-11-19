@@ -1,7 +1,7 @@
 import React from 'react';
 import Data from '../data/ResourceLinks.json';
 
-export function ResourceCard(props){
+export function ResourceCard(props) {
     const title = props.title;
     const image = props.image;
     const alt = props.alt;
@@ -11,7 +11,7 @@ export function ResourceCard(props){
             <div className='card mb-4'>
                 <div className="entry-card card-body">
                     <div className="col-sm-auto">
-                        <img className="col-sm-12" id="homecardpic" src={image} alt={alt}/> 
+                        <img className="col-sm-12" id="homecardpic" src={image} alt={alt} />
                     </div>
                     <div className="col-sm">
                         <h2 className="card-title homeTitle">{title}</h2>

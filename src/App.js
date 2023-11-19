@@ -2,6 +2,7 @@ import React from 'react';
 import NavbarComponent from './components/Navbar.js';
 import Home from './components/Home.js';
 import Quiz from './components/Quiz.js';
+import QuizResults from './components/Quiz.js';
 import Calculator from './components/Calculator.js';
 import ResourcePage from './components/ResourcePage.js';
 import QuizData from './data/Quiz.json'

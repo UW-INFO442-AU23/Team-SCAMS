@@ -18,6 +18,7 @@ img {
     margin-left: 2em;
     font-weight: bold;
 }
+
 .navbar-nav {
     margin-left: auto;
 }
@@ -26,13 +27,13 @@ img {
     color: #006D04
 }
 
-   Nav.Link .navbar-link {
+Nav.Link .navbar-link {
     color: aqua;
-  }  
+}
 
-  .navbar-nav > .nav-link.active {
+.navbar-nav>.nav-link.active {
     color: #006D04;
-  }
+}
 
 /* FOOTER STYLING */
 .footer_link {
@@ -40,7 +41,7 @@ img {
     color: #000000;
 }
 
-  /* BUTTON STYLING */
+/* BUTTON STYLING */
 .button_center {
     text-align: center;
 }
@@ -125,7 +126,8 @@ img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 20px; /* Adjusted space to the left and right of the member cards */
+    margin: 0 20px;
+    /* Adjusted space to the left and right of the member cards */
 }
 
 .about-us-section {
@@ -178,7 +180,7 @@ img {
     .quiz_background {
         background-image: url("../public/long bus outline.png");
         background-repeat: no-repeat;
-        background-position: top -250px center;
+        background-position: top -200px center;
     }
 }
 
@@ -232,6 +234,14 @@ img {
     margin-top: 20px;
     max-width: 420px;
     padding: 15px;
+}
+
+.correct {
+    color: green
+}
+
+.incorrect {
+    color: red
 }
 
 .correct-answers>h4,

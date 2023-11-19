@@ -7,7 +7,7 @@ function EachFeature(props) {
                 <div className="row justify-content-between text-left align-items-center">
                     <div className="homepage-img col-md">
                         <img src={props.source} width="600px" height="300px"
-                            alt={props.alt} class="img-fluid"/>
+                            alt={props.alt} class="img-fluid" />
                     </div>
                     <div className="col-md p-4">
                         <h3>{props.name}</h3>
@@ -34,7 +34,7 @@ export function KeyFeatures(props) {
                 greenhouse gas emissions, accounting for 28% of total emissions 
                 in 2021. Human health, ecosystem health, and urban infrastructure 
                 will be at risk if we don’t take action soon."
-                buttonname= "Calculate Your Carbon Emissions"
+                buttonname="Calculate Your Carbon Emissions"
                 path="emissions_calculator"
             />
             <EachFeature
@@ -46,7 +46,7 @@ export function KeyFeatures(props) {
                 buttonname="View Resources"
                 path="resources"
             />
-            <EachFeature 
+            <EachFeature
                 source="img/bus.jpg"
                 alt="People walking out of a bus"
                 name="Transportation Knowledge Quiz"

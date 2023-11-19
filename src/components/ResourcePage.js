@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { ResourceCard } from "./ResourceCard";
 
-export default function ResourcePage (props) {
-    <Route path="/ResourcePage" element={<ResourcePage/>} />
+export default function ResourcePage(props) {
+    <Route path="/ResourcePage" element={<ResourcePage />} />
     return (
-        <Resource/>
+        <Resource />
     )
 }
 
@@ -18,15 +18,15 @@ function Title(props) {
     )
 }
 
-export function Resource (props) {
-    return(
-        <div className='container'> 
+export function Resource(props) {
+    return (
+        <div className='container'>
             <Title heading1={'Resource Page'} />
-        
+            <p class="text-center">*Hint: If you want to ace our Knowledge Quiz, this is a good page to help you learn more about sustainable modes of transportation!</p>
             <h2>What is a Carbon Footprint?</h2>
             <p>
                 According to the <a
-                    href="https://www.nationalgeographic.com/environment/article/what-is-a-carbon-footprint-how-to-measure-yours?loggedin=true&rnd=1698131599474">National
+                    href="https://www.nationalgeographic.com/environment/article/what-is-a-carbon-footprint-how-to-measure-yours?loggedin=true&rnd=1698131599474" target="_blank">National
                     Geographic</a>, a carbon footprint is defined as “the sum total of all the greenhouse
                 gas emissions that had to take place in order for a product to be produced or for an activity to take
                 place.” Greenhouse gasses are gasses in the Earth’s atmosphere that trap heat (think carbon dioxide,
@@ -38,21 +38,21 @@ export function Resource (props) {
             </p>
 
             <div class="container callout_container rounded py-4 my-5">
-                
+
                 <h2 class="text-center">Green Tip!</h2>
                 <p>Are you viewing this website on your computer through Chrome? Did you know that <a
-                        href="https://googleblog.blogspot.com/2009/01/powering-google-search.html">every
-                        Google search produces around 0.2 grams of carbon dioxide</a>? Here are a couple of alternate web browsers
-                        that are eco-friendlier and help offset your carbon footprint using money generated from ad revenue:
+                    href="https://googleblog.blogspot.com/2009/01/powering-google-search.html" target="_blank">every
+                    Google search produces around 0.2 grams of carbon dioxide</a>? Here are a couple of alternate web browsers
+                    that are eco-friendlier and help offset your carbon footprint using money generated from ad revenue:
                 </p>
                 <li>
-                    <a href="https://www.ecosia.org/?c=en">Ecosia:</a> Plants trees
+                    <a href="https://www.ecosia.org/?c=en" target="_blank">Ecosia:</a> Plants trees
                 </li>
                 <li>
-                    <a href="https://www.ekoru.org/">Ecosia:</a> Removes trash from ocean
+                    <a href="https://www.ekoru.org/" target="_blank">Ecosia:</a> Removes trash from ocean
                 </li>
                 <li>
-                    <a href="https://rapusia.org/">Rapusia:</a> Donates money to social and environmental projects
+                    <a href="https://rapusia.org/" target="_blank">Rapusia:</a> Donates money to social and environmental projects
                 </li>
             </div>
 
@@ -60,7 +60,7 @@ export function Resource (props) {
             <p>
                 What’s one way that you can reduce your carbon footprint? If you commute regularly by driving yourself in a
                 car, a good first step can be how you get around King County. According to the <a
-                    href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">US Environmental Protection
+                    href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases" target="_blank">US Environmental Protection
                     Agency</a>, “the combustion of fossil fuels such as gasoline and diesel to transport people and goods
                 was the largest source of CO2 emissions in 2021, accounting for 35% of total U.S. CO2 emissions and 28% of
                 total
@@ -68,7 +68,7 @@ export function Resource (props) {
                 greenhouse gas emissions. Click on each card below to learn more about each method of eco-friendlier,
                 sustainable modes of transportation that are available in the Seattle area.
             </p>
-            
+
             <div class="py-4">
                 <h4 class="text-center">Take our Knowledge Quiz to see how much you know!</h4>
 
@@ -76,8 +76,6 @@ export function Resource (props) {
                     <button type="button" class="btn btn-primary">Take The Quiz</button>
                 </div>
             </div>
-            
-            <ResourceCard />
         </div>
 
     )

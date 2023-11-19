@@ -2,6 +2,47 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 
 
+function QuizQuestion(props) {
+
+    const { quizData, index, onSelect } = props
+
+    const handleOptionSelect = (event) => {
+        const selectedAnswer = event.target.id;
+        onSelect(quizData.id, selectedAnswer);
+    };
+
+    return (
+        <div>
+            <div className="container quiz_question">
+                <h2>{quizData.question}</h2>
+            </div>
+
+            <div className="container rounded quiz_window">
+                <p>{quizData.a}</p>
+
+                <p>{quizData.b}</p>
+
+                <p>{quizData.c}</p>
+
+                <p>{quizData.d}</p>
+            </div>
+            <div className="button_center">
+                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'a'} autoComplete="off" onChange={handleOptionSelect} />
+                <label className="btn btn-outline-success" for={quizData.id + 'a'}>A</label>
+
+                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'b'} autoComplete="off" onChange={handleOptionSelect} />
+                <label className="btn btn-outline-success" for={quizData.id + 'b'}>B</label>
+
+                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'c'} autoComplete="off" onChange={handleOptionSelect} />
+                <label className="btn btn-outline-success" for={quizData.id + 'c'}>C</label>
+
+                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'd'} autoComplete="off" onChange={handleOptionSelect} />
+                <label className="btn btn-outline-success" for={quizData.id + 'd'}>D</label>
+            </div>
+        </div>
+    )
+}
+
 function QuizResult(props) {
     const { QuizData, answers } = props
 
@@ -107,48 +148,6 @@ function QuizResult(props) {
                     </p>
                     <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">Where we got this stat:</a>
                 </div>
-            </div>
-        </div>
-    )
-}
-
-
-function QuizQuestion(props) {
-
-    const { quizData, index, onSelect } = props
-
-    const handleOptionSelect = (event) => {
-        const selectedAnswer = event.target.id;
-        onSelect(quizData.id, selectedAnswer);
-    };
-
-    return (
-        <div>
-            <div className="container quiz_question">
-                <h2>{quizData.question}</h2>
-            </div>
-
-            <div className="container rounded quiz_window">
-                <p>{quizData.a}</p>
-
-                <p>{quizData.b}</p>
-
-                <p>{quizData.c}</p>
-
-                <p>{quizData.d}</p>
-            </div>
-            <div className="button_center">
-                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'a'} autoComplete="off" onChange={handleOptionSelect} />
-                <label className="btn btn-outline-success" for={quizData.id + 'a'}>A</label>
-
-                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'b'} autoComplete="off" onChange={handleOptionSelect} />
-                <label className="btn btn-outline-success" for={quizData.id + 'b'}>B</label>
-
-                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'c'} autoComplete="off" onChange={handleOptionSelect} />
-                <label className="btn btn-outline-success" for={quizData.id + 'c'}>C</label>
-
-                <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'd'} autoComplete="off" onChange={handleOptionSelect} />
-                <label className="btn btn-outline-success" for={quizData.id + 'd'}>D</label>
             </div>
         </div>
     )
