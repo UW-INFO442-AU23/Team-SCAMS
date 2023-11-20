@@ -25,7 +25,7 @@ export default function App(props) {
         <Route path='/home' element={<Home />} />
         <Route path='/emissions_calculator' element={<Calculator />} />
         <Route path='/knowledge_quiz' element={<Quiz data={QuizData} onSubmit={handleSubmit}/>} />
-        <Route path='/knowledge_quiz_results' element={<QuizResults data={QuizData} answers={userAnswer}/>} />
+        <Route path='/knowledge_quiz_results' element={<QuizResults QuizData={QuizData} answers={userAnswer}/>} />
         <Route path='/resources' element={<ResourcePage />} />
       </Routes>
       <Footer />
@@ -39,7 +39,7 @@ function Footer() {
       <div className='container'>
         <div className='row align-items-end'>
           <div className='col-3'>
-            <img src="logo.png" alt="go green logo" width="160" height="90" />
+            <img src="logo.png" alt="go green logo" width="113" height="56"/>
             <p>&copy; INFO 442 Group SCAMS 2023</p>
           </div>
           <div className='col'>
@@ -53,10 +53,6 @@ function Footer() {
           </div>
         </div>
       </div>
-
-      {/* <div className="text-center">
-        <p>&copy; INFO 442 Group SCAMS 2023</p>
-      </div> */}
     </footer>
   )
 }

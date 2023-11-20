@@ -9,7 +9,7 @@ export default function NavbarComponent(props) {
         <Navbar expand="lg" variant="light">
             <Container>
                 <Navbar.Brand as={Link} to='home'>
-                    <img src="logo.png" alt="go green logo" width="160" height="90" />
+                    <img src="logo.png" alt="go green logo" width="113" height="56" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

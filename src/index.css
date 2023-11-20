@@ -215,6 +215,8 @@ Nav.Link .navbar-link {
         background-repeat: no-repeat;
         background-position: top -225px center;
     }
+
+
 }
 
 .quiz_question:first-child {
@@ -245,7 +247,7 @@ Nav.Link .navbar-link {
 /* QUIZ RESULTS PAGE STYLING */
 @media (min-width: 1063px) {
     .quiz-results-background {
-        background-image: url("../public/short bus outline.png");
+        background-image: url("../public/bus outline short.png");
         background-repeat: no-repeat;
         background-position: top -100px center;
     }
