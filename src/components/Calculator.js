@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Data from '../data/CarbonRate.json';
 
 export default function Calculator() {
   const [miles, setMiles] = useState('');
-  const [transportation, setTransportation] = useState('Walk');
+  const [transportation, setTransportation] = useState('Walking');
   const [output, setOutput] = useState('');
   const [error, setError] = useState('');
 
   const handleMilesChange = (event) => {
     let inputValue = event.target.value;
     setMiles(inputValue);
-    console.log(inputValue);
+    setOutput('');
   };
 
   const handleTransportationChange = (event) => {
     let inputValue = event.target.value;
     setTransportation(inputValue);
-    console.log(inputValue);
+    setOutput('');
   };
 
   const handleSubmit = (event) => {
@@ -28,8 +27,7 @@ export default function Calculator() {
       return;
     }
 
-    setError(''); // Reset error if miles is a valid number
-    console.log('submitting', miles, transportation);
+    setError('');
     setOutput('User input value');
   };
 
@@ -37,18 +35,69 @@ export default function Calculator() {
     if (error) {
       return (
         <div>
-          <h1 className='pb-2 text-center'>Result:</h1>
-          <img src='img/lightrail.png' alt='Washington State Lightrail' width='600px' />
+          <img src='img/lightrail.png' alt='Washington State Lightrail' width='100%' />
         </div>
       );
     } else if (output.length > 0) {
+      const selectedTransportation = Data.find((item) => item.transportation === transportation);
+      let otherTransportations = Data.filter((item) => item.transportation !== transportation);
+      if (miles > 1.5) {
+        otherTransportations = otherTransportations.filter((item) => item.transportation !== 'Walking');
+      }
+      if (miles < 100) {
+        otherTransportations = otherTransportations.filter((item) => item.transportation !== 'Plane');
+      }
+      if (miles < 3) {
+        otherTransportations = otherTransportations.filter(
+          (item) => item.transportation !== 'Car' && item.transportation !== 'Carpool' && item.transportation !== 'Train (Diesel)'
+        );
+      }
+      if (miles > 50) {
+        otherTransportations = otherTransportations.filter(
+          (item) => item.transportation !== 'Lightrail (Electricity)' && item.transportation !== 'Bus' && item.transportation !== 'Biking'
+        );
+      }
+
       return (
         <div>
           <h1 className='pb-2 text-center'>Result:</h1>
-          {Data.map((item) => (
+          <p className='text-center bg-warning bg-opacity-25'>
+            You chose to travel {miles} miles by {transportation}.
+          </p>
+          <h2 className='text-center'>Your Planned Trip:</h2>
+          {selectedTransportation && (
+            <div className='container bg-success bg-opacity-50'>
+              <div className='row align-items-center'>
+                <div className='col-12 col-md-auto'>
+                  <img
+                    src={selectedTransportation.imageURL}
+                    alt={selectedTransportation.transportation}
+                    className='small-image bg-success bg-opacity-25 mb-2 mt-2'
+                    style={{ maxWidth: '100%' }}
+                  />
+                </div>
+                <div className='col-12 col-md-auto text-white'>
+                  <p>
+                    Your carbon footprint by {selectedTransportation.transportation} is {Math.round(selectedTransportation.rate * miles)} g CO₂-eq.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <h2 className='text-center'>Other Travel Plans:</h2>
+          {otherTransportations.map((item) => (
             <div className='container' key={item.transportation}>
-              <img src={item.imageURL} alt={item.transportation} className='small-image bg-success bg-opacity-25 mb-2 mt-2' />
-              Your carbon footprint by {item.transportation} is {Math.round(item.rate * miles)} g CO₂-eq.
+              <div className='row align-items-center'>
+                <div className='col-12 col-md-auto'>
+                  <img src={item.imageURL} alt={item.transportation} className='small-image bg-success bg-opacity-25 mb-2 mt-2' style={{ maxWidth: '100%' }} />
+                </div>
+                <div className='col-12 col-md-auto'>
+                  <p>
+                    Your carbon footprint by {item.transportation} is {Math.round(item.rate * miles)} g CO₂-eq.
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -56,8 +105,7 @@ export default function Calculator() {
     } else {
       return (
         <div>
-          <h1 className='pb-2 text-center'>Result:</h1>
-          <img src='img/lightrail.png' alt='Washington State Lightrail' width='600px' />
+          <img src='img/lightrail.png' alt='Washington State Lightrail' width='100%' />
         </div>
       );
     }
@@ -67,7 +115,7 @@ export default function Calculator() {
     <main>
       <div className='container mt-5 mb-5'>
         <div className='row align-items-start'>
-          <div className='col'>
+          <div className='col-12 col-md-6'>
             <h1 className='pb-2 text-center'>Check Your Carbon Emissions</h1>
             <div className='form-container'>
               <div className='form-content'>
@@ -76,7 +124,6 @@ export default function Calculator() {
                     <label htmlFor='mileage'>How far are you traveling? (in Miles)</label>
                     <input type='text' id='mileage' name='mileage' className='form-control' onChange={handleMilesChange} required />
                   </section>
-                  {/* Display error message if there is an error */}
                   {error && <p style={{ color: 'red' }}>{error}</p>}
                   <div className='form-group'>
                     <label htmlFor='transportation-options'>How will you get there?</label>
@@ -113,7 +160,7 @@ export default function Calculator() {
               </a>
             </p>
           </div>
-          <div className='col'>
+          <div className='col-12 col-md-6'>
             <div className='container bg-light'>{result()}</div>
           </div>
         </div>

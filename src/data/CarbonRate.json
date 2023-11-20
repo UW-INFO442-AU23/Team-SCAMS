@@ -1,11 +1,11 @@
 [
   {
-    "transportation": "Walk",
+    "transportation": "Walking",
     "rate": "0",
     "imageURL": "img/calculator-icons/walk_icon.png"
   },
   {
-    "transportation": "Bike",
+    "transportation": "Biking",
     "rate": "0",
     "imageURL": "img/calculator-icons/bike_icon.png"
   },

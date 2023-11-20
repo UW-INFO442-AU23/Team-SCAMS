@@ -85,6 +85,17 @@ Nav.Link .navbar-link {
     font-size: 2rem;
 }
 
+/* CALCULATOR PAGE STYLING */
+.result-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .result-text {
+    margin-left: 10px; /* Adjust the spacing between image and text as needed */
+  }
+  
 /* HOME PAGE STYLING */
 
 .intro-section {
@@ -196,17 +207,6 @@ Nav.Link .navbar-link {
     outline: 5px solid #006D04;
 }
 
-/* CALCULATOR PAGE STYLING */
-.form-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-content {
-    flex: 1;
-    margin-right: 20px;
-    /* Adjust the margin as needed */
-}
 
 /* QUIZ PAGE STYLING */
 @media (min-width: 1063px) {
