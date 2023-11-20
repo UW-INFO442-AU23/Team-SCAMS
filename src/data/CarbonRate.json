@@ -1,34 +1,42 @@
 [
   {
     "transportation": "Walk",
-    "rate": "0"
+    "rate": "0",
+    "imageURL": "img/calculator-icons/walk_icon.png"
   },
   {
     "transportation": "Bike",
-    "rate": "0"
+    "rate": "0",
+    "imageURL": "img/calculator-icons/bike_icon.png"
   },
   {
     "transportation": "Lightrail (Electricity)",
-    "rate": "0"
+    "rate": "0",
+    "imageURL": "img/calculator-icons/lightrail_icon.png"
   },
   {
     "transportation": "Train (Diesel)",
-    "rate": "30.6"
+    "rate": "30.6",
+    "imageURL": "img/calculator-icons/train_icon.png"
   },
   {
     "transportation": "Bus",
-    "rate": "101.4"
+    "rate": "101.4",
+    "imageURL": "img/calculator-icons/bus_icon.png"
   },
   {
     "transportation": "Carpool",
-    "rate": "119.1"
+    "rate": "119.1",
+    "imageURL": "img/calculator-icons/carpool_icon.png"
   },
   {
     "transportation": "Car",
-    "rate": "238.1"
+    "rate": "238.1",
+    "imageURL": "img/calculator-icons/car_icon.png"
   },
   {
     "transportation": "Plane",
-    "rate": "197.9"
+    "rate": "197.9",
+    "imageURL": "img/calculator-icons/plane_icon.png"
   }
 ]

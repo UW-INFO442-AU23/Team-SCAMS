@@ -7,7 +7,7 @@ export default function Calculator() {
   <Route path="/Calculator" element={<Calculator />} />
   const [miles, setMiles] = useState("");
   const [transportation, setTransportation] = useState("Walk");
-  let [output, setOutput] = useState([]);
+  const [output, setOutput] = useState("");
 
   // handle user input miles (num input)
   const handleMilesChange = (event) => {
@@ -23,20 +23,33 @@ export default function Calculator() {
     console.log(inputValue)
   }
 
+  // execute when user click submit button
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("submitting", miles, transportation);
-    calculatingCallback()
+    setOutput("User input value")
+    //calculatingCallback()
     //setMiles("") //empty the input
     //setTransportation("Walk") //default the input
   }
 
-  function calculatingCallback() {
-    let carbonEmission = [];
-    for (var i = 0; i < Data.length; i++) {
-      carbonEmission.push(Math.round(Data[i].rate * miles))
+  function result() {
+    if (output.length > 0) {
+      return (
+        <div>
+          {Data.map(item => (
+            <div className='container' key={item.transportation}>
+              <img src={item.imageURL} alt={item.transportation} className="small-image bg-success bg-opacity-25 mb-2 mt-2" />
+              Your carbon footprint by {item.transportation} is {Math.round(item.rate * miles)} g CO₂-eq.
+            </div>
+          ))}
+        </div>
+      )
+    } else {
+      return (
+        <img src="img/lightrail.png" alt="Washington State Lightrail" width="600px" />
+      )
     }
-    console.log(carbonEmission)
   }
 
   return (
@@ -74,8 +87,8 @@ export default function Calculator() {
             </p>
           </div>
           <div className='col'>
-            <div className='container bg-light result'>
-              <img src="img/lightrail.png" alt="Washington State Lightrail" width="600px" />
+            <div className='container bg-light'>
+              {result()}
             </div>
           </div>
         </div>
