@@ -25,7 +25,7 @@ export default function App(props) {
         <Route path='/home' element={<Home />} />
         <Route path='/emissions_calculator' element={<Calculator />} />
         <Route path='/knowledge_quiz' element={<Quiz data={QuizData} onSubmit={handleSubmit}/>} />
-        <Route path='/knowledge_quiz_results' element={<QuizResults QuizData={QuizData} answers={userAnswer}/>} />
+        <Route path='/knowledge_quiz_results' element={<QuizResults QuizData={QuizData} answers={userAnswer} onSubmit={handleSubmit}/>} />
         <Route path='/resources' element={<ResourcePage />} />
       </Routes>
       <Footer />

@@ -1,6 +1,7 @@
 import { jsxClosingElement } from '@babel/types';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default function QuizResults(props) {
@@ -29,6 +30,10 @@ export default function QuizResults(props) {
 
     // })
 
+    const handleSubmit = () => {
+        props.onSubmit();
+    };
+
     const full_answers = letter_answers.map((letter_answers, index_num) => QuizData[index_num][letter_answers])
 
     console.log(full_answers)
@@ -46,10 +51,11 @@ export default function QuizResults(props) {
     const result = count / correct.length
 
     return (
-        <main className='quiz_background'>
+        <main className='quiz-results-background'>
             <div>
                 <div>
                     <h1 className="text-center">Your Quiz Results:</h1>
+                    <p className="text-center">Make sure to click the "Take Quiz Again" button at the bottom of the page if you want to try again!</p>
                 </div>
 
                 <div className="container quiz_question">
@@ -121,6 +127,9 @@ export default function QuizResults(props) {
                         <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">Where we got this stat</a>
                     </div>
                 </div>
+                <div className='button_center'>
+                <Link to={`/knowledge_quiz`} className="btn btn-primary my-5" onClick={handleSubmit}>Take Quiz Again</Link>
+            </div>
             </div>
         </main>
     )

@@ -244,12 +244,17 @@ Nav.Link .navbar-link {
     margin-top: 30px;
 }
 
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
 /* QUIZ RESULTS PAGE STYLING */
 @media (min-width: 1063px) {
     .quiz-results-background {
         background-image: url("../public/bus outline short.png");
         background-repeat: no-repeat;
-        background-position: top -100px center;
+        background-position: top -225px center;
     }
 
     .flex-container {

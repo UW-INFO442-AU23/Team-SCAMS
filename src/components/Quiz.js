@@ -55,11 +55,20 @@ export default function Quiz(props) {
             ...prevAnswers,
             [questionId]: answer,
         }));
+    };
 
+
+    const [isAnswered, setIsAnswered] = useState(true);
+
+    const handleIsAnswered = () => {
+        console.log(isAnswered)
+        if (answers.length === 5) {
+            setIsAnswered(!isAnswered);
+        } 
     };
 
     const questionArray = data.map((question, index) => {
-        return <QuizQuestion quizData={question} key={index} onSelect={handleAnswer} />
+        return <QuizQuestion quizData={question} key={index} onClick={handleIsAnswered} onSelect={handleAnswer} />
     })
 
     const handleSubmit = () => {
@@ -77,7 +86,7 @@ export default function Quiz(props) {
                 </div>
             </div>
             <div className='button_center'>
-                <Link to={`/knowledge_quiz_results`} className="btn btn-primary my-5" onClick={handleSubmit}>Submit</Link>
+                <Link to={`/knowledge_quiz_results`} className="btn btn-primary my-5" onClick={handleSubmit}>{isAnswered ? "Answer All Questions First!" : "Submit"}</Link>
             </div>
 
         </main>
