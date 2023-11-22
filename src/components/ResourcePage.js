@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import { ResourceCard } from "./ResourceCard";
+//import { ResourceCard } from "./ResourceCard";
+import POPUP_DATA from '../data/ResourceLinks.json';
 
 export default function ResourcePage(props) {
     <Route path="/ResourcePage" element={<ResourcePage />} />
@@ -18,7 +19,61 @@ function Title(props) {
     )
 }
 
+export function ResourceCard(props) {
+    const title = props.title;
+    const image = props.image;
+    const alt = props.alt;
+
+    return (
+        <div className="d-flex col-md-6 col-lg-4 px-4 py-3">
+            <div className='card mb-4'>
+                <div className="entry-card card-body">
+                    <div className="col-sm-auto">
+                        <img className="col-sm-12" id="homecardpic" src={image} alt={alt} />
+                    </div>
+                    <div className="col-sm">
+                        <h2 className="card-title homeTitle">{title}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+  
+export function EntryCardList(props) {
+    const links = props.links;
+    const compArr = links.map((entryObj, index) => {
+        const element = (
+            <ResourceCard
+                title={entryObj.title}
+                image={entryObj.image}
+                alt={entryObj.alt}
+                key={index}
+            />
+        )
+        return element;
+    })
+
+   return (
+        <div id="class-cards" className="row">
+            {compArr} 
+        </div>
+    )
+}
+
 export function Resource(props) {
+
+    const [jsonData, setJsonData] = useState(POPUP_DATA);
+
+    useEffect(() => {
+        // Fetch your JSON data here, for example:
+        fetch(POPUP_DATA)
+        .then((response) => response.json())
+        .then((data) => setJsonData(data.cards))
+        .catch((error) => console.error('Error fetching JSON:', error));
+    }, []);
+
     return (
         <div className='container'>
             <Title heading1={'Resource Page'} />
@@ -68,14 +123,19 @@ export function Resource(props) {
                 greenhouse gas emissions. Click on each card below to learn more about each method of eco-friendlier,
                 sustainable modes of transportation that are available in the Seattle area.
             </p>
+            
+            <div className="row py-4">
+                <EntryCardList links={jsonData}/>
+            </div>
 
-            <div class="py-4">
+            <div class="py-5">
                 <h4 class="text-center">Take our Knowledge Quiz to see how much you know!</h4>
 
                 <div class="button_center">
                     <button type="button" class="btn btn-primary">Take The Quiz</button>
                 </div>
             </div>
+
         </div>
 
     )

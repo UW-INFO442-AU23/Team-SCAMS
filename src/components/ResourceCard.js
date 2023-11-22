@@ -1,5 +1,5 @@
 import React from 'react';
-import Data from '../data/ResourceLinks.json';
+import POPUP_DATA from '../data/ResourceLinks.json';
 
 export function ResourceCard(props) {
     const title = props.title;
@@ -21,3 +21,26 @@ export function ResourceCard(props) {
         </div>
     );
 }
+
+  
+export function EntryCardList(props) {
+    const links = props.links;
+    const compArr = links.map((entryObj, index) => {
+        const element = (
+            <ResourceCard
+                title={entryObj.title}
+                image={entryObj.image}
+                alt={entryObj.alt}
+                key={index}
+            />
+        )
+        return element;
+    })
+
+   return (
+        <div id="class-cards" className="row">
+            {compArr} 
+        </div>
+    )
+}
+

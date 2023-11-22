@@ -1,1 +1,37 @@
-[]
+[
+    {
+      "title": "Bike",
+      "image": "img/bikepic.png",
+      "alt": "Bike"
+    },
+
+    {
+        "title": "Bus",
+        "image": "img/buspic.png",
+        "alt": "Bus"
+    },
+
+    {
+        "title": "Link",
+        "image": "img/trainpic.png",
+        "alt": "Link light rail train"
+    },
+
+    {
+        "title": "Walking",
+        "image": "img/walkingpic.png",
+        "alt": "Walking"
+    },
+
+    {
+        "title": "Driving",
+        "image": "img/driver.png",
+        "alt": "Driving"
+    },
+
+    {
+        "title": "Lime Scooter",
+        "image": "img/limescoot.png",
+        "alt": "Lime scooter"
+    }
+]
