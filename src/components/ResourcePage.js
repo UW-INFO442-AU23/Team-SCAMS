@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 //import { ResourceCard } from "./ResourceCard";
-import POPUP_DATA from '../data/ResourceLinks.json';
+import CARD_DATA from '../data/ResourceLinks.json';
 
 export default function ResourcePage(props) {
     <Route path="/ResourcePage" element={<ResourcePage />} />
@@ -20,42 +20,70 @@ function Title(props) {
 }
 
 
-const Modal = ({ title, image, onClose }) => (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <img src={image} alt={title} />
-        <h2>{title}</h2>
-        <button onClick={onClose}>Close</button>
-      </div>
+const Modal = ({ description, videoUrl, onClose }) => (
+
+        <div id="modal-overlay" onClick={onClose}>
+            <div id="modal-content">
+                <p>{description}</p>
+
+                <div className="video-container">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src={videoUrl} 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+                <button className="mt-4" id="close-btn" onClick={onClose}>Close</button>
+            </div>
     </div>
   );
 
 export function ResourceCard(props) {
     const title = props.title;
     const image = props.image;
+    const description = props.description;
     const alt = props.alt;
+    const videoUrl = props.videoUrl;
+    const id = props.id;
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
+    // const openModal = () => setIsModalOpen(true);
+    // const closeModal = () => setIsModalOpen(false);
+
+    const [open, openModal] = useState(false)
+
+    const toggleModal = () => {
+        openModal(!open)
+    };
+
+    //openModal({id})
 
     return (
         <div className="d-flex col-md-6 col-lg-4 px-4 py-3">
-            <div className='card mb-4' onClick={openModal}>
+            <div className='card mb-4' onClick={toggleModal}>
                 <div className="entry-card card-body">
+
                     <div className="col-sm-auto">
                         <img className="col-sm-12" id="homecardpic" src={image} alt={alt} />
                     </div>
                     <div className="col-sm">
                         <h2 className="card-title homeTitle">{title}</h2>
                     </div>
-                    {isModalOpen && (
-                    <Modal title={title} image={image} onClose={closeModal} />
-                    )}
+                    
                 </div>
+                {open && (
+                    <Modal description={description} videoUrl={videoUrl} open={open} id={id} onClose={toggleModal} />
+                )}
             </div>
         </div>
+
     );
 }
   
@@ -68,6 +96,8 @@ export function EntryCardList(props) {
                 title={entryObj.title}
                 image={entryObj.image}
                 alt={entryObj.alt}
+                description={entryObj.description}
+                videoUrl={entryObj.videoUrl}
                 key={index}
             />
         )
@@ -83,11 +113,11 @@ export function EntryCardList(props) {
 
 export function Resource(props) {
 
-    const [jsonData, setJsonData] = useState(POPUP_DATA);
+    const [jsonData, setJsonData] = useState(CARD_DATA);
 
     useEffect(() => {
         // Fetch your JSON data here, for example:
-        fetch(POPUP_DATA)
+        fetch(CARD_DATA)
         .then((response) => response.json())
         .then((data) => setJsonData(data.cards))
         .catch((error) => console.error('Error fetching JSON:', error));
@@ -144,6 +174,7 @@ export function Resource(props) {
             </p>
             
             <div className="row py-4">
+                <h4>Click on each mode of transportation to learn more about each one!</h4>
                 <EntryCardList links={jsonData}/>
             </div>
 

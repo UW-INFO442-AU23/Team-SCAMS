@@ -1,37 +1,55 @@
 [
     {
+     "id": 1,
       "title": "Bike",
       "image": "img/bikepic.png",
-      "alt": "Bike"
+      "alt": "A person riding a bike",
+      "videoUrl": "https://www.youtube.com/embed/IdEJHXykJ4I?si=tOFrsQKkBYf5RpYv",
+      "description": "Seattle’s electric bike share program allows commuters to rent nearest available bikes through apps and leave them parked for the next user. The program, which started in 2017, has seen an average of 3,326 riders every day. Biking can be a fun, low impact way to get around King County!"
     },
 
     {
+        "id": 2,
         "title": "Bus",
         "image": "img/buspic.png",
-        "alt": "Bus"
+        "alt": "Inside a bus",
+        "videoUrl": "https://www.youtube.com/embed/H5pxm_erHwg?si=3GQP5Yw9B66o265Z",
+        "description": "King County Metro has 237 bus routes that carry over 400,000 passengers daily as of 2019. The eighth-largest transit bus agency in the United States, Metro passengers can pay the $2.75 fare (for adults) with cash, by tapping an ORCA card, or a smartphone app. If you’re 18 years or younger, you can ride Metro for free!"
     },
 
     {
+        "id": 3,
         "title": "Link",
         "image": "img/trainpic.png",
-        "alt": "Link light rail train"
+        "alt": "Link light rail train",
+        "videoUrl": "https://www.youtube.com/embed/vqft6ly1Mys?si=i5W-yawkEc5I6GDi",
+        "description": "The Link light rail is one of the newest additions to Seattle public transportation; it’s a rapid form of transportation that travels between Northgate and Angle Lake, making stops every 6, 10, or 15 minutes depending on the time of day at frequently traveled stations, like the SeaTac airport, the University of Washington, and Downtown Seattle."
     },
 
     {
+        "id": 4,
         "title": "Walking",
         "image": "img/walkingpic.png",
-        "alt": "Walking"
+        "alt": "People walking",
+        "videoUrl": "https://www.youtube.com/embed/anWff1mZ2tY?si=8txBj7yPsRLS8XE3",
+        "description": "Of course, walking is also a mode of transportation, and very sustainable! According to Redfin, Seattle has a walkability score of 74, making it a very walkable city. Studies have shown that walking 8000 steps a day (around 3-4 miles) can help drastically reduce risk of heart disease. Consider walking to work, school, or wherever you need to go if you only live a couple miles away!"
     },
 
     {
-        "title": "Driving",
+        "id": 5,
+        "title": "Carpooling",
         "image": "img/driver.png",
-        "alt": "Driving"
+        "alt": "A person driving",
+        "videoUrl": "https://www.youtube.com/embed/e-gIHqeNwTY?si=9LN6jA0Fwv5CoZIx",
+        "description": "Do you live too far to bike or walk? Bus or light rail doesn’t pass through your neighborhood? Carpooling with coworkers, classmates, or friends can be a good option too! Consider sharing a ride with someone traveling to the same destination as a way to reduce your carbon footprint. This can help cut down on gasoline prices as well, making it a better alternative to driving yourself alone."
     },
 
     {
-        "title": "Lime Scooter",
+        "id": 6,
+        "title": "Scooter",
         "image": "img/limescoot.png",
-        "alt": "Lime scooter"
+        "alt": "Lime Scooters lined up on a block",
+        "videoUrl": "https://www.youtube.com/embed/Zo3cCyhBfko?si=zGI7ZlaorJRakefj",
+        "description": "Although the King County scooter share program ended in April 2023, the Seattle scooter program (which is separate) is still ongoing! You can rent from 3 different scooter brands; like with shared bikes, commuters can rent the nearest available scooter through apps and leave them at a scooter rental station for the next user."
     }
 ]

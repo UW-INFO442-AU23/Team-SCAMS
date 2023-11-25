@@ -94,7 +94,7 @@ export function AboutUs(props) {
                 role="Project Manager & Developer"
             />
             <EachPerson
-                source="img/driver.png"
+                source="img/team-members/mari.jpg"
                 alt="Mari Woodworth, one of the creators of this web app"
                 name="Mari Woodworth"
                 role="UX Designer & Developer"
