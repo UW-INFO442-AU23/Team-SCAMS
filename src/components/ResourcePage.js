@@ -64,10 +64,10 @@ export function ResourceCard(props) {
     };
 
     //openModal({id})
-
+    // card to mb-4
     return (
         <div className="d-flex col-md-6 col-lg-4 px-4 py-3">
-            <div className='card mb-4' onClick={toggleModal}>
+            <div className='mb-4' onClick={toggleModal}>
                 <div className="entry-card card-body">
 
                     <div className="col-sm-auto">

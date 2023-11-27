@@ -322,9 +322,9 @@ Nav.Link .navbar-link {
 
 /* CARD STYLING */
 .card-body {
-    background-color: #e6f2f2;
+    /* background-color: #F8F8F8; */
     text-align: center;
-    box-shadow: 0 8px 40px rgb(49 78 46 / 15%);
+    /* box-shadow: 0 8px 40px rgb(49 78 46 / 15%); */
 }
 
 .card-title {
@@ -334,10 +334,10 @@ Nav.Link .navbar-link {
 }
 
 .entry-card {
-    background-color: #fff;
-    border-color:#b3bbff;
+    /* background-color: #F8F8F8; */
+    border-color:#fff;
     text-align: center;
-    box-shadow: 0 8px 40px rgb(49 78 46 / 15%);
+    /* box-shadow: 0 8px 40px rgb(49 78 46 / 15%); */
     border-radius: 1%;
 }
 
@@ -379,8 +379,8 @@ Nav.Link .navbar-link {
     border-radius: 5px;
     max-width: 800px;
     text-align: center;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.5);;
+    /* border-style: solid; */
+    /* border-color: rgba(0, 0, 0, 0.5); */
   }
   
   #modal-content img {
