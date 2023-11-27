@@ -426,5 +426,16 @@ Nav.Link .navbar-link {
     } 
 
   }
+
+  #resourcepic img {
+    max-width: 100%;
+    height: 200px;
+}
+
+@media (max-width: 768px) {
+    #resourcepic {
+        width: 100%;
+    }
+}
   
 

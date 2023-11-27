@@ -14,7 +14,7 @@ function Title(props) {
     const heading1 = props.heading1;
     return (
         <div className="d-flex px-4 py-4 justify-content-center">
-            <h2>{heading1}</h2>
+            <h1>{heading1}</h1>
         </div>
     )
 }
@@ -71,7 +71,7 @@ export function ResourceCard(props) {
                 <div className="entry-card card-body">
 
                     <div className="col-sm-auto">
-                        <img className="col-sm-12" id="homecardpic" src={image} alt={alt} />
+                        <img className="col-sm-12" id="resourcepic" src={image} alt={alt} />
                     </div>
                     <div className="col-sm">
                         <h2 className="card-title homeTitle">{title}</h2>
@@ -127,7 +127,7 @@ export function Resource(props) {
         <div className='container'>
             <Title heading1={'Resource Page'} />
             <p class="text-center">*Hint: If you want to ace our Knowledge Quiz, this is a good page to help you learn more about sustainable modes of transportation!</p>
-            <h2>What is a Carbon Footprint?</h2>
+            <h2 class="py-4">What is a Carbon Footprint?</h2>
             <p>
                 According to the <a
                     href="https://www.nationalgeographic.com/environment/article/what-is-a-carbon-footprint-how-to-measure-yours?loggedin=true&rnd=1698131599474" target="_blank">National
@@ -160,7 +160,7 @@ export function Resource(props) {
                 </li>
             </div>
 
-            <h2>Alternate Forms of Transportation</h2>
+            <h2 class="py-4">Alternate Forms of Transportation</h2>
             <p>
                 What’s one way that you can reduce your carbon footprint? If you commute regularly by driving yourself in a
                 car, a good first step can be how you get around King County. According to the <a
@@ -174,7 +174,7 @@ export function Resource(props) {
             </p>
             
             <div className="row py-4">
-                <h4>Click on each mode of transportation to learn more about each one!</h4>
+                <h4 class="text-center py-4">Click on each mode of transportation to learn more about each one!</h4>
                 <EntryCardList links={jsonData}/>
             </div>
 
@@ -182,7 +182,9 @@ export function Resource(props) {
                 <h4 class="text-center">Take our Knowledge Quiz to see how much you know!</h4>
 
                 <div class="button_center">
-                    <button type="button" class="btn btn-primary">Take The Quiz</button>
+                    <a type="button" className="btn btn-primary" href="knowledge_quiz">
+                        Take The Quiz
+                    </a>
                 </div>
             </div>
 
