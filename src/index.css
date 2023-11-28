@@ -189,16 +189,16 @@ Nav.Link .navbar-link {
     .about-us-section {
         width: 100%;
     }
-}
 
-@media (max-width: 480px) {
     iframe {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        height: 120%;
     }
+}
+
+@media (max-width: 480px) {
 
     .homepage-descrip {
         padding-right: 0;
