@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
 function QuizQuestion(props) {
 
     const { quizData, index, onSelect } = props
@@ -57,24 +56,18 @@ export default function Quiz(props) {
         }));
     };
 
-
-    const [isAnswered, setIsAnswered] = useState(false);
-
-    const handleIsAnswered = () => {
-        if (Object.keys(answers).length > 4) {
-            setIsAnswered(true);
-        }
-        setIsAnswered(false) 
-    };
-
     const questionArray = data.map((question, index) => {
-        return <QuizQuestion quizData={question} key={index} onClick={handleIsAnswered} onSelect={handleAnswer} />
+        return <QuizQuestion quizData={question} key={index} onSelect={handleAnswer} />
     })
 
     const handleSubmit = () => {
         props.onSubmit(answers);
     };
-    //console.log(answers)
+
+    var isAnswered = false;
+    if (Object.keys(answers).length > 4) {
+        isAnswered = true;
+    }
 
     return (
         <main className='quiz_background'>
@@ -85,11 +78,9 @@ export default function Quiz(props) {
                     {questionArray}
                 </div>
             </div>
-            <div className='button_center'>
-                <Link to={`/knowledge_quiz_results`} className="btn btn-primary my-5" onClick={handleSubmit}>{isAnswered ? "Submit" : "Answer All Questions First"}</Link>
+            <div className={isAnswered ? 'button_center' : 'disabledbutton'}>
+                <Link to={`/knowledge_quiz_results`} className="btn btn-primary my-5" onClick={handleSubmit}>{"Submit"}</Link>
             </div>
-
         </main>
     )
-
 }

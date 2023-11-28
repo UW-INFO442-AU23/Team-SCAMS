@@ -2,7 +2,7 @@ import { jsxClosingElement } from '@babel/types';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import { Chart } from "react-google-charts";
 
 export default function QuizResults(props) {
     <Route path="/QuizResults" element={<QuizResults />} />
@@ -22,23 +22,12 @@ export default function QuizResults(props) {
         return answers_array[1] - 1
     })
 
-    // array of user answer choices as full option
-    // const full_answers = letter_answers.map((letter_answers, index_num)=> {
-    //     let question_index = index_num
-    //     let user_answer = letter_answers
-    //     return QuizData[question_index][user_answer]
-
-    // })
-
     const handleSubmit = () => {
         props.onSubmit();
     };
 
     const full_answers = letter_answers.map((letter_answers, index_num) => QuizData[index_num][letter_answers])
-
     console.log(full_answers)
-    // console.log(QuizData[1]["c"])
-    // console.log(QuizData[index_num][letter_answers])
 
     // calculating user score
     for (let i = 0; i < answers_array.length; i++) {
@@ -49,6 +38,30 @@ export default function QuizResults(props) {
         }
     }
     const result = count / correct.length
+
+    // for pie chart visualization
+    const data = [
+        ["Correctness", "Count"],
+        ["Correct", result],
+        ["Incorrect", 1-result],
+    ];
+    const options = {
+        colors: ['#002E68', '#CCE4EB'],
+      };
+
+    // for color-coding right/wrong answers
+    const isCorrect = [];
+    for (let i = 0; i < answers_array.length; i++) {
+        for (let k = 0; k < correct.length; k++) {
+            if (answers_array[i] === correct[k]) {
+                isCorrect.push(true);
+            }
+            else {
+                isCorrect.push(false)
+            }
+        }
+    }
+    console.log(isCorrect)
 
     return (
         <main className='quiz-results-background'>
@@ -66,6 +79,13 @@ export default function QuizResults(props) {
 
                     <div className="your-score">
                         <h3>Your Score: {result * 100}% correct</h3>
+                        <Chart
+                            chartType="PieChart"
+                            data={data}
+                            options={options}
+                            width={"250px"}
+                            height={"auto"}
+                        />
                     </div>
 
                     <div className="correct-answers">
@@ -76,7 +96,7 @@ export default function QuizResults(props) {
                         <p>
                             Answer: C. Northgate and Angle Lake
                         </p>
-                        <p>
+                        <p className={isCorrect[0] ? 'correct' : 'incorrect'}>
                             You said: {full_answers[0]}
                         </p>
                         <a href="https://www.soundtransit.org/ride-with-us/stations/link-light-rail-stations">Want more info on the available stations? Find out here!</a>
@@ -87,7 +107,7 @@ export default function QuizResults(props) {
                         <p>
                             Answer: C. 8,000 steps
                         </p>
-                        <p>
+                        <p className={isCorrect[1] ? 'correct' : 'incorrect'}>
                             You said: {full_answers[1]}
                         </p>
                         <a href="https://www.health.harvard.edu/heart-health/step-up-your-walking-game">Click to read the Harvard study.</a>
@@ -98,7 +118,7 @@ export default function QuizResults(props) {
                         <p>
                             Answer: B. Carbon Dioxide
                         </p>
-                        <p>
+                        <p className={isCorrect[2] ? 'correct' : 'incorrect'}>
                             You said: {full_answers[2]}
                         </p>
                         <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">It's carbon dioxide!</a>
@@ -109,7 +129,7 @@ export default function QuizResults(props) {
                         <p>
                             Answer: D. 400,000 passengers
                         </p>
-                        <p>
+                        <p className={isCorrect[3] ? 'correct' : 'incorrect'}>
                             You said: {full_answers[3]}
                         </p>
                         <a href="https://en.wikipedia.org/wiki/King_County_Metro#cite_note-METRO_Mag_Survey-3">Read the King County Metro's Wiki page!</a>
@@ -121,15 +141,15 @@ export default function QuizResults(props) {
                         <p>
                             Answer: A. 35%
                         </p>
-                        <p>
+                        <p className={isCorrect[4] ? 'correct' : 'incorrect'}>
                             You said: {full_answers[4]}
                         </p>
                         <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">Where we got this stat</a>
                     </div>
                 </div>
                 <div className='button_center'>
-                <Link to={`/knowledge_quiz`} className="btn btn-primary my-5" onClick={handleSubmit}>Take Quiz Again</Link>
-            </div>
+                    <Link to={`/knowledge_quiz`} className="btn btn-primary my-5" onClick={handleSubmit}>Take Quiz Again</Link>
+                </div>
             </div>
         </main>
     )
