@@ -97,6 +97,14 @@ Nav.Link .navbar-link {
     /* Adjust the spacing between image and text as needed */
 }
 
+.result-headers {
+    padding-top: 2rem;
+}
+
+.form-group {
+    padding-top: 1.5rem;
+}
+
 /* HOME PAGE STYLING */
 
 .intro-section {

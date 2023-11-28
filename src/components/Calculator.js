@@ -60,11 +60,11 @@ export default function Calculator() {
 
       return (
         <div>
-          <h1 className='pb-2 text-center'>Result:</h1>
+          <h1 className='pb-2 text-center result-headers'>Result</h1>
           <p className='text-center bg-warning bg-opacity-25'>
             You chose to travel {miles} miles by {transportation}.
           </p>
-          <h2 className='text-center'>Your Planned Trip:</h2>
+          <h2 className='text-center result-headers'>Your Planned Trip:</h2>
           {selectedTransportation && (
             <div className='container bg-success bg-opacity-50'>
               <div className='row align-items-center'>
@@ -85,7 +85,7 @@ export default function Calculator() {
             </div>
           )}
 
-          <h2 className='text-center'>Other Travel Plans:</h2>
+          <h2 className='text-center result-headers'>Other Travel Options:</h2>
           {otherTransportations.map((item) => (
             <div className='container' key={item.transportation}>
               <div className='row align-items-center'>
@@ -116,17 +116,26 @@ export default function Calculator() {
       <div className='container mt-5 mb-5'>
         <div className='row align-items-start'>
           <div className='col-12 col-md-6'>
-            <h1 className='pb-2 text-center'>Check Your Carbon Emissions</h1>
+            <h1 className='pb-2 text-left'>Check Your Carbon Emissions</h1>
             <div className='form-container'>
+              <p>
+                According to the <a href="https://www.mozilla.org/en-US/">EPA</a>,
+                "the average passenger vehicle emits about 400 grams of CO2 per mile," which can lead to "4.6 metric tons of
+                carbon dioxide" per year. <strong>Our goal</strong> is to urge you to utilize modes of transportation that have a <strong>CO2-eq as close to 0 g as possible.</strong>
+              </p>
               <div className='form-content'>
                 <form>
                   <section className='form-group'>
-                    <label htmlFor='mileage'>How far are you traveling? (in Miles)</label>
+                    <strong>
+                      <label htmlFor='mileage'>How far are you traveling? (in Miles)</label>
+                    </strong>
                     <input type='text' id='mileage' name='mileage' className='form-control' onChange={handleMilesChange} required />
                   </section>
                   {error && <p style={{ color: 'red' }}>{error}</p>}
                   <div className='form-group'>
-                    <label htmlFor='transportation-options'>How will you get there?</label>
+                    <strong>
+                      <label htmlFor='transportation-options'>How will you get there?</label>
+                    </strong>
                     <select
                       value={transportation}
                       id='transportation-options'
@@ -156,7 +165,7 @@ export default function Calculator() {
             <p>
               Check our data source{' '}
               <a href='https://www.iea.org/data-and-statistics/charts/well-to-wheel-wake-wing-ghg-intensity-of-motorised-passenger-transport-modes-2' target='_blank'>
-                here
+                here.
               </a>
             </p>
           </div>
