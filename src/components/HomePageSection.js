@@ -27,7 +27,7 @@ export function KeyFeatures(props) {
     return (
         <>
             <EachFeature
-                source="public/car.jpg"
+                source="img/car.jpg"
                 alt="White SUV driving fast"
                 name="Carbon Emissions Calculator"
                 description="The transportation sector stands as the leading contributor to 
