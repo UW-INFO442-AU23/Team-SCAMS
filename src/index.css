@@ -41,6 +41,16 @@ Nav.Link .navbar-link {
     color: #000000;
 }
 
+.footer_layout {
+    line-height: .8;
+}
+
+.footer_logo {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
 /* BUTTON STYLING */
 .button_center {
     text-align: center;
@@ -235,6 +245,7 @@ Nav.Link .navbar-link {
         background-image: url("../public/long bus outline.png");
         background-repeat: no-repeat;
         background-position: top -225px center;
+        min-height: 2800px;
     }
 }
 
@@ -272,9 +283,10 @@ Nav.Link .navbar-link {
 /* QUIZ RESULTS PAGE STYLING */
 @media (min-width: 1063px) {
     .quiz-results-background {
-        background-image: url("../public/bus outline short.png");
+        background-image: url("../public/bus\ outline\ short\ v.2.png");
         background-repeat: no-repeat;
         background-position: top -225px center;
+        min-height: 1680px;
     }
 
     .flex-container {

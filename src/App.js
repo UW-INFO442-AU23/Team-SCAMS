@@ -35,21 +35,21 @@ export default function App(props) {
 
 function Footer() {
   return (
-    <footer className="bg-light my-0 py-0 footer">
+    <footer className="bg-light my-0 py-0 footer feature-section">
       <div className='container'>
         <div className='row align-items-end'>
-          <div className='col-3'>
+          <div className='col-lg-3 col-sm-3 footer_logo'>
             <img src="logo.png" alt="go green logo" width="113" height="56"/>
             <p>&copy; INFO 442 Group SCAMS 2023</p>
           </div>
-          <div className='col'>
+          <div className='col-lg col-sm'>
           </div>
-          <div className='col-2'>
-            <p className='fw-semibold my-1'>Navigation:</p>
-            <p className='my-1'><Link to='/home' className='footer_link'>Home</Link></p>
-            <p className='my-1'><Link to='/emissions_calculator' className='footer_link'>Calculator</Link></p>
-            <p className='my-1'><Link to='/resources' className='footer_link'>Resources</Link></p>
-            <p className='my-1'><Link to='/knowledge_quiz' className='footer_link'>Knowledge Quiz</Link></p>
+          <div className='col-lg-2 col-sm-2'>
+            <p className='fw-semibold my-2'>Navigation:</p>
+            <p className='footer_layout'><Link to='/home' className='footer_link'>Home</Link></p>
+            <p className='footer_layout'><Link to='/emissions_calculator' className='footer_link'>Calculator</Link></p>
+            <p className='footer_layout'><Link to='/resources' className='footer_link'>Resources</Link></p>
+            <p className='footer_layout'><Link to='/knowledge_quiz' className='footer_link'>Knowledge Quiz</Link></p>
           </div>
         </div>
       </div>
