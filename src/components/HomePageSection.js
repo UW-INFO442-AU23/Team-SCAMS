@@ -65,12 +65,40 @@ function EachPerson(props) {
         <section className="about-us-section">
             <div className="team-member">
                 <img src={props.source} alt={props.alt} />
-                <h3>{props.name}</h3>
+                <h3>{props.name}
+                    <a class="linkedin" href={props.linkedin}>
+                        <img src="linkedin-icon.png" alt="LinkedIn Icon"/>
+                    </a>
+                </h3>
                 <p>{props.role}</p>
             </div>
         </section>
     )
 }
+
+// this is the linkedin pop-out tab version but the buttons looks weird :(
+// function EachPerson(props) {
+    
+//     // Source: https://www.geeksforgeeks.org/how-to-open-url-in-new-tab-using-javascript/
+//     const openLinkedInInNewWindow = () => {
+//         window.open(props.linkedin, '_blank');
+//     };
+
+//     return (
+//         <section className="about-us-section">
+//             <div className="team-member">
+//                 <img src={props.source} alt={props.alt} />
+//                 <h3>
+//                     {props.name}
+//                     <button className="linkedin" onClick={openLinkedInInNewWindow}>
+//                         <img src="linkedin-icon.png" alt="LinkedIn Icon" />
+//                     </button>
+//                 </h3>
+//                 <p>{props.role}</p>
+//             </div>
+//         </section>
+//     );
+// }
 
 export function AboutUs(props) {
     return (
@@ -78,32 +106,37 @@ export function AboutUs(props) {
             <EachPerson
                 source="img/team-members/sabrina.jpg"
                 alt="Sabrina Lin, one of the creators of this web app"
-                name="Sabrina Lin"
+                name="Sabrina Lin "
                 role="Project Manager & Developer"
+                linkedin="https://www.linkedin.com/in/sabrinazlin/"
             />
             <EachPerson
                 source="img/team-members/claire.png"
                 alt="Claire Lai, one of the creators of this web app"
-                name="Claire Lai"
+                name="Claire Lai "
                 role="UX Designer & Developer"
+                linkedin="https://www.linkedin.com/in/cglai/"
             />
             <EachPerson
                 source="img/team-members/Alyson.jpeg"
                 alt="Alyson Yu, one of the creators of this web app"
-                name="Alyson Yu"
+                name="Alyson Yu "
                 role="Project Manager & Developer"
+                linkedin="https://www.linkedin.com/in/alyyu/"
             />
             <EachPerson
                 source="img/team-members/mari.jpg"
                 alt="Mari Woodworth, one of the creators of this web app"
-                name="Mari Woodworth"
+                name="Mari Woodworth "
                 role="UX Designer & Developer"
+                linkedin="https://www.linkedin.com/in/marikowoodworth/"
             />
             <EachPerson
                 source="img/team-members/sarah.png"
                 alt="Sarah Chu, one of the creators of this web app"
-                name="Sarah Chu"
+                name="Sarah Chu "
                 role="UX Researcher & Developer"
+                linkedin="https://www.linkedin.com/in/sarah-chu18/"
             />
         </div>
     );

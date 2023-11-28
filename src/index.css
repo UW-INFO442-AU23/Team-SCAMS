@@ -166,6 +166,17 @@ Nav.Link .navbar-link {
     margin-top: 2rem;
 }
 
+.linkedin img {
+    height: 15px;
+    width: 15px;
+    border-radius: 0;
+}
+
+/* .linkedin {
+    border: 'none';
+    background: 'transparent';
+} */
+
 @media (max-width: 768px) {
     .about-us-section {
         width: 100%;
