@@ -66,7 +66,7 @@ function EachPerson(props) {
             <div className="team-member">
                 <img src={props.source} alt={props.alt} />
                 <h3>{props.name}
-                    <a class="linkedin" href={props.linkedin}>
+                    <a target="_blank" class="linkedin" href={props.linkedin}>
                         <img src="linkedin-icon.png" alt="LinkedIn Icon" />
                     </a>
                 </h3>
