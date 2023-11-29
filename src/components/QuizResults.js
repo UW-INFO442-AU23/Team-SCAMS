@@ -9,13 +9,13 @@ export default function QuizResults(props) {
     const { QuizData, answers } = props
     console.log(QuizData)
 
-    // array for matching user answers to correct answers
+    // array for matching user answer values to correct answer values
     const correct = ["Q1c", "Q2c", "Q3b", "Q4d", "Q5a"]
     let count = 0
     // array of user answer values
     const answers_array = Object.values(answers).sort()
 
-    // array of user answer values as letter choice only
+    // array of user answers as letter choice only
     const letter_answers = answers_array.map((answers_array) => answers_array[2])
 
     const index_num = answers_array.map((answers_array) => {
@@ -27,7 +27,7 @@ export default function QuizResults(props) {
     };
 
     const full_answers = letter_answers.map((letter_answers, index_num) => QuizData[index_num][letter_answers])
-    console.log(full_answers)
+    // console.log(full_answers)
 
     // calculating user score
     for (let i = 0; i < answers_array.length; i++) {
@@ -57,9 +57,10 @@ export default function QuizResults(props) {
                 isCorrect.push(true);
             }
             else {
-                isCorrect.push(false)
+                isCorrect.push(false);
             }
         }
+        isCorrect.push(false)
     }
     console.log(isCorrect)
 
@@ -75,15 +76,15 @@ export default function QuizResults(props) {
                     <h2>Congrats on finishing the quiz!</h2>
                 </div>
 
-                <div className="flex-container">
+                {/* <div className="flex-container"> */}
 
                     <div className="your-score">
-                        <h3>Your Score: {result * 100}% correct</h3>
+                        <h3 className="text-center">Your Score: {result * 100}% correct</h3>
                         <Chart
                             chartType="PieChart"
                             data={data}
                             options={options}
-                            width={"250px"}
+                            width={"auto"}
                             height={"auto"}
                         />
                     </div>
@@ -107,7 +108,7 @@ export default function QuizResults(props) {
                         <p>
                             Answer: C. 8,000 steps
                         </p>
-                        <p className={isCorrect[1] ? 'correct' : 'incorrect'}>
+                        <p className={isCorrect[7] ? 'correct' : 'incorrect'}>
                             You said: {full_answers[1]}
                         </p>
                         <a href="https://www.health.harvard.edu/heart-health/step-up-your-walking-game">Click to read the Harvard study.</a>
@@ -118,7 +119,7 @@ export default function QuizResults(props) {
                         <p>
                             Answer: B. Carbon Dioxide
                         </p>
-                        <p className={isCorrect[2] ? 'correct' : 'incorrect'}>
+                        <p className={isCorrect[14] ? 'correct' : 'incorrect'}>
                             You said: {full_answers[2]}
                         </p>
                         <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">It's carbon dioxide!</a>
@@ -129,7 +130,7 @@ export default function QuizResults(props) {
                         <p>
                             Answer: D. 400,000 passengers
                         </p>
-                        <p className={isCorrect[3] ? 'correct' : 'incorrect'}>
+                        <p className={isCorrect[21] ? 'correct' : 'incorrect'}>
                             You said: {full_answers[3]}
                         </p>
                         <a href="https://en.wikipedia.org/wiki/King_County_Metro#cite_note-METRO_Mag_Survey-3">Read the King County Metro's Wiki page!</a>
@@ -141,12 +142,12 @@ export default function QuizResults(props) {
                         <p>
                             Answer: A. 35%
                         </p>
-                        <p className={isCorrect[4] ? 'correct' : 'incorrect'}>
+                        <p className={isCorrect[28] ? 'correct' : 'incorrect'}>
                             You said: {full_answers[4]}
                         </p>
                         <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">Where we got this stat</a>
                     </div>
-                </div>
+                {/* </div> */}
                 <div className='button_center'>
                     <Link to={`/knowledge_quiz`} className="btn btn-primary my-5" onClick={handleSubmit}>Take Quiz Again</Link>
                 </div>

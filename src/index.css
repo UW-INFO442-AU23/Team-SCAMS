@@ -301,9 +301,9 @@ Nav.Link .navbar-link {
 
 .correct-answers,
 .your-score {
-    margin-top: 20px;
-    max-width: 440px;
-    padding: 15px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .correct {
