@@ -13,7 +13,6 @@ img {
 }
 
 /* NAV STYLING */
-
 .nav-link {
     margin-left: 2em;
     font-weight: bold;
@@ -132,7 +131,6 @@ Nav.Link .navbar-link {
 }
 
 /* HOME PAGE STYLING */
-
 .intro-section {
     padding-bottom: 5rem;
     margin-top: 5rem;
@@ -206,11 +204,6 @@ Nav.Link .navbar-link {
     border-radius: 0;
 }
 
-/* .linkedin {
-    border: 'none';
-    background: 'transparent';
-} */
-
 @media (max-width: 768px) {
     .about-us-section {
         width: 100%;
@@ -239,13 +232,6 @@ Nav.Link .navbar-link {
         background-color: #F0F0F0;
         padding-bottom: 0;
     }
-
-    /* .homepage-img {
-        display: block;
-        margin-left: 1rem;
-        margin-right: 1rem;
-
-    } */
 }
 
 /* RESOURCE PAGE STYLING */
@@ -370,22 +356,17 @@ Nav.Link .navbar-link {
 
 /* CARD STYLING */
 .card-body {
-    /* background-color: #F8F8F8; */
     text-align: center;
-    /* box-shadow: 0 8px 40px rgb(49 78 46 / 15%); */
 }
 
 .card-title {
     font-size: 1.5rem;
     padding-top: 1rem;
-    /* color: #fff; */
 }
 
 .entry-card {
-    /* background-color: #F8F8F8; */
     border-color: #fff;
     text-align: center;
-    /* box-shadow: 0 8px 40px rgb(49 78 46 / 15%); */
     border-radius: 1%;
 }
 
@@ -401,7 +382,6 @@ Nav.Link .navbar-link {
 }
 
 .entry-card:hover {
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
     transform: scale(1.025);
     cursor: pointer;
 }
@@ -427,8 +407,6 @@ Nav.Link .navbar-link {
     border-radius: 5px;
     max-width: 800px;
     text-align: center;
-    /* border-style: solid; */
-    /* border-color: rgba(0, 0, 0, 0.5); */
 }
 
 #modal-content img {
@@ -470,11 +448,6 @@ Nav.Link .navbar-link {
     line-height: 30px;
     font-weight: 400;
     text-align: center;
-
-    :hover {
-        background-color: #f4f6f9;
-    }
-
 }
 
 #resourcepic img {

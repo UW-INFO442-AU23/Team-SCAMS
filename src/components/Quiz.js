@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 import { Link } from "react-router-dom";
 
 function QuizQuestion(props) {
-
     const { quizData, index, onSelect } = props
-
     const handleOptionSelect = (event) => {
         const selectedAnswer = event.target.id;
         onSelect(quizData.id, selectedAnswer);

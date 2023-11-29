@@ -67,7 +67,7 @@ function EachPerson(props) {
                 <img src={props.source} alt={props.alt} />
                 <h3>{props.name}
                     <a class="linkedin" href={props.linkedin}>
-                        <img src="linkedin-icon.png" alt="LinkedIn Icon"/>
+                        <img src="linkedin-icon.png" alt="LinkedIn Icon" />
                     </a>
                 </h3>
                 <p>{props.role}</p>
@@ -75,30 +75,6 @@ function EachPerson(props) {
         </section>
     )
 }
-
-// this is the linkedin pop-out tab version but the buttons looks weird :(
-// function EachPerson(props) {
-    
-//     // Source: https://www.geeksforgeeks.org/how-to-open-url-in-new-tab-using-javascript/
-//     const openLinkedInInNewWindow = () => {
-//         window.open(props.linkedin, '_blank');
-//     };
-
-//     return (
-//         <section className="about-us-section">
-//             <div className="team-member">
-//                 <img src={props.source} alt={props.alt} />
-//                 <h3>
-//                     {props.name}
-//                     <button className="linkedin" onClick={openLinkedInInNewWindow}>
-//                         <img src="linkedin-icon.png" alt="LinkedIn Icon" />
-//                     </button>
-//                 </h3>
-//                 <p>{props.role}</p>
-//             </div>
-//         </section>
-//     );
-// }
 
 export function AboutUs(props) {
     return (

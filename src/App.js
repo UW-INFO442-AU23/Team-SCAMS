@@ -16,7 +16,7 @@ export default function App(props) {
   const handleSubmit = (answers) => {
     setUserAnswer(answers)
   };
-  
+
   return (
     <div>
       <NavbarComponent />
@@ -24,8 +24,8 @@ export default function App(props) {
         <Route path='*' element={<Navigate to='/home' />} />
         <Route path='/home' element={<Home />} />
         <Route path='/emissions_calculator' element={<Calculator />} />
-        <Route path='/knowledge_quiz' element={<Quiz data={QuizData} onSubmit={handleSubmit}/>} />
-        <Route path='/knowledge_quiz_results' element={<QuizResults QuizData={QuizData} answers={userAnswer} onSubmit={handleSubmit}/>} />
+        <Route path='/knowledge_quiz' element={<Quiz data={QuizData} onSubmit={handleSubmit} />} />
+        <Route path='/knowledge_quiz_results' element={<QuizResults QuizData={QuizData} answers={userAnswer} onSubmit={handleSubmit} />} />
         <Route path='/resources' element={<ResourcePage />} />
       </Routes>
       <Footer />
@@ -37,10 +37,10 @@ function Footer() {
   return (
     <footer className="bg-light my-0 py-0 footer feature-section">
       <div className='container footer_container'>
-          <div className='col-lg-3 col-sm-3 footer_logo'>
-            <img src="logo.png" alt="go green logo" width="113" height="56"/>
-            <p>&copy; INFO 442 Group SCAMS 2023</p>
-          </div>
+        <div className='col-lg-3 col-sm-3 footer_logo'>
+          <img src="logo.png" alt="go green logo" width="113" height="56" />
+          <p>&copy; INFO 442 Group SCAMS 2023</p>
+        </div>
       </div>
     </footer>
   )

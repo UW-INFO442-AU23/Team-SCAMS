@@ -51,9 +51,6 @@ export function HomePage(props) {
                                 <button className="btn btn-primary" onClick={() => jump('one')}>
                                     Learn More
                                 </button>
-
-                                {/* <button className="btn btn-primary" onclick="jump('one')">Learn More About Sustainable Transportation</button> */}
-                                {/* <a className="btn btn-primary" href="#" role="button">Learn More About Sustainable Transportation</a> */}
                             </div>
                         </div>
 
@@ -99,7 +96,6 @@ function createAnimator(config, callback, done) {
         duration = config.duration || 1000,
         startTime, endTime;
 
-    //t*(b-d)/(a-c) + (a*d-b*c)/(a-c);
     function precalculate(a, b, c, d) {
         return [(b - d) / (a - c), (a * d - b * c) / (a - c)];
     }

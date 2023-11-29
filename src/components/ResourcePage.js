@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-//import { ResourceCard } from "./ResourceCard";
 import CARD_DATA from '../data/ResourceLinks.json';
 
 export default function ResourcePage(props) {
@@ -19,30 +18,27 @@ function Title(props) {
     )
 }
 
-
 const Modal = ({ description, videoUrl, onClose }) => (
 
-        <div id="modal-overlay" onClick={onClose}>
-            <div id="modal-content">
-                <p>{description}</p>
+    <div id="modal-overlay" onClick={onClose}>
+        <div id="modal-content">
+            <p>{description}</p>
 
-                <div className="video-container">
-                    <iframe 
-                        width="560" 
-                        height="315" 
-                        src={videoUrl} 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
-
-                </div>
-
-                <button className="mt-4" id="close-btn" onClick={onClose}>Close</button>
+            <div className="video-container">
+                <iframe
+                    width="560"
+                    height="315"
+                    src={videoUrl}
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
             </div>
+            <button className="mt-4" id="close-btn" onClick={onClose}>Close</button>
+        </div>
     </div>
-  );
+);
 
 export function ResourceCard(props) {
     const title = props.title;
@@ -51,20 +47,11 @@ export function ResourceCard(props) {
     const alt = props.alt;
     const videoUrl = props.videoUrl;
     const id = props.id;
-
-    // const [isModalOpen, setIsModalOpen] = useState(false);
-
-    // const openModal = () => setIsModalOpen(true);
-    // const closeModal = () => setIsModalOpen(false);
-
     const [open, openModal] = useState(false)
-
     const toggleModal = () => {
         openModal(!open)
     };
 
-    //openModal({id})
-    // card to mb-4
     return (
         <div className="d-flex col-md-6 col-lg-4 px-4 py-3">
             <div className='mb-4' onClick={toggleModal}>
@@ -76,18 +63,15 @@ export function ResourceCard(props) {
                     <div className="col-sm">
                         <h2 className="card-title homeTitle">{title}</h2>
                     </div>
-                    
                 </div>
                 {open && (
                     <Modal description={description} videoUrl={videoUrl} open={open} id={id} onClose={toggleModal} />
                 )}
             </div>
         </div>
-
     );
 }
-  
-  
+
 export function EntryCardList(props) {
     const links = props.links;
     const compArr = links.map((entryObj, index) => {
@@ -103,24 +87,21 @@ export function EntryCardList(props) {
         )
         return element;
     })
-
-   return (
+    return (
         <div id="class-cards" className="row">
-            {compArr} 
+            {compArr}
         </div>
     )
 }
 
 export function Resource(props) {
-
     const [jsonData, setJsonData] = useState(CARD_DATA);
-
     useEffect(() => {
         // Fetch your JSON data here, for example:
         fetch(CARD_DATA)
-        .then((response) => response.json())
-        .then((data) => setJsonData(data.cards))
-        .catch((error) => console.error('Error fetching JSON:', error));
+            .then((response) => response.json())
+            .then((data) => setJsonData(data.cards))
+            .catch((error) => console.error('Error fetching JSON:', error));
     }, []);
 
     return (
@@ -172,10 +153,10 @@ export function Resource(props) {
                 greenhouse gas emissions. Click on each card below to learn more about each method of eco-friendlier,
                 sustainable modes of transportation that are available in the Seattle area.
             </p>
-            
+
             <div className="row py-4">
                 <h4 class="text-center py-4">Click on each mode of transportation to learn more about each one!</h4>
-                <EntryCardList links={jsonData}/>
+                <EntryCardList links={jsonData} />
             </div>
 
             <div class="py-5">
@@ -187,8 +168,6 @@ export function Resource(props) {
                     </a>
                 </div>
             </div>
-
         </div>
-
     )
 }

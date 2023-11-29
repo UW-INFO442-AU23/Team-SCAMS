@@ -5,7 +5,6 @@ export function ResourceCard(props) {
     const title = props.title;
     const image = props.image;
     const alt = props.alt;
-
     return (
         <div className="d-flex col-md-6 col-lg-4 px-4 py-3">
             <div className='card mb-4'>
@@ -22,7 +21,6 @@ export function ResourceCard(props) {
     );
 }
 
-  
 export function EntryCardList(props) {
     const links = props.links;
     const compArr = links.map((entryObj, index) => {
@@ -36,10 +34,9 @@ export function EntryCardList(props) {
         )
         return element;
     })
-
-   return (
+    return (
         <div id="class-cards" className="row">
-            {compArr} 
+            {compArr}
         </div>
     )
 }
