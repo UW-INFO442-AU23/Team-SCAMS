@@ -6,7 +6,7 @@ import { Nav } from 'react-bootstrap';
 
 export default function NavbarComponent(props) {
     return (
-        <Navbar expand="lg" variant="light">
+        <Navbar expand="lg" variant="light" sticky="top" bg="white" className='nav_padding'>
             <Container>
                 <Navbar.Brand as={Link} to='home'>
                     <img src="logo.png" alt="go green logo" width="113" height="56" />
