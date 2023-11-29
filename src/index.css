@@ -83,7 +83,6 @@ Nav.Link .navbar-link {
     border-color: #004903 !important;
 }
 
-/* is using min-height min-width a bad thing */
 .quiz_answers {
     min-height: 120px;
     min-width: 166px;
@@ -119,7 +118,6 @@ Nav.Link .navbar-link {
 
 .result-text {
     margin-left: 10px;
-    /* Adjust the spacing between image and text as needed */
 }
 
 .result-headers {
@@ -137,7 +135,6 @@ Nav.Link .navbar-link {
 }
 
 .homepage-img {
-    /* this css ensures that each section in the home page is properly spaced out. */
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -149,8 +146,7 @@ Nav.Link .navbar-link {
 .feature-section {
     background-color: #F0F0F0;
     padding-bottom: 5rem;
-    margin-left: -40px;
-    /* Negative margin to compensate for container padding */
+    margin-left: -40px; /* Negative margin to compensate for container padding */
     margin-right: -40px;
 }
 
