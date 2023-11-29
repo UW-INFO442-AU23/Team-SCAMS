@@ -25,12 +25,8 @@ GitHub Pages link:
 * Train
 * Walking
 
-_________
-
 ## User Personas
 View our user personas here: https://drive.google.com/file/d/1Toz8Tbt1K45uOd2hNt1QswbnrTUZuDaJ/view?usp=drive_link
-
-________
 
 ## Development Instructions
 
