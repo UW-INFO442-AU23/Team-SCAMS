@@ -248,8 +248,8 @@ Nav.Link .navbar-link {
 }
 
 .quiz_spacing {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
 } 
 
 .quiz_question:first-child {
