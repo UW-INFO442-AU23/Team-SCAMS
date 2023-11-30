@@ -44,7 +44,6 @@ Nav.Link .navbar-link {
     .footer {
         display: none;
     }
-
 }
 
 .footer_link {
@@ -59,7 +58,6 @@ Nav.Link .navbar-link {
 .footer_logo {
     padding-top: 1rem;
     padding-bottom: 1rem;
-
 }
 
 .footer_container {
@@ -118,6 +116,7 @@ Nav.Link .navbar-link {
 
 .result-text {
     margin-left: 10px;
+    /* Adjust the spacing between image and text as needed */
 }
 
 .result-headers {
@@ -135,6 +134,7 @@ Nav.Link .navbar-link {
 }
 
 .homepage-img {
+    /* this css ensures that each section in the home page is properly spaced out. */
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -146,7 +146,8 @@ Nav.Link .navbar-link {
 .feature-section {
     background-color: #F0F0F0;
     padding-bottom: 5rem;
-    margin-left: -40px; /* Negative margin to compensate for container padding */
+    margin-left: -40px;
+    /* Negative margin to compensate for container padding */
     margin-right: -40px;
 }
 
@@ -236,7 +237,6 @@ Nav.Link .navbar-link {
     outline: 5px solid #006D04;
 }
 
-
 /* QUIZ PAGE STYLING */
 @media (min-width: 1063px) {
     .quiz_background {
@@ -246,6 +246,11 @@ Nav.Link .navbar-link {
         min-height: 2800px;
     }
 }
+
+.quiz_spacing {
+    padding-left: 80px;
+    padding-right: 80px;
+} 
 
 .quiz_question:first-child {
     margin-top: 80px;
@@ -266,7 +271,6 @@ Nav.Link .navbar-link {
     max-width: 700px;
     color: #002E68;
     font-weight: bold;
-    font-size: 1.2em;
     padding: 20px;
     margin-bottom: 20px;
     margin-top: 30px;
