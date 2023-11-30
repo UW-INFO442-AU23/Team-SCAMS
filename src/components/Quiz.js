@@ -24,7 +24,7 @@ function QuizQuestion(props) {
 
                 <p>{quizData.d}</p>
             </div>
-            <div className="button_center">
+            <div className="button_center quiz_spacing">
                 <input type="radio" className="btn-check" name={quizData.id} id={quizData.id + 'a'} autoComplete="off" onChange={handleOptionSelect} />
                 <label className="btn btn-outline-success" for={quizData.id + 'a'}>A</label>
 
