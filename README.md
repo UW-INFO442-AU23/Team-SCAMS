@@ -53,7 +53,7 @@ View our user personas here: https://drive.google.com/file/d/1Toz8Tbt1K45uOd2hNt
 ### Deploy Build to GitHub Pages
 ```npm run deploy```
 
-### Testing Protocol
+### Testing Protocol - Acceptance Tests
 **Calculator**  
 Test Scenario: User calculates carbon emissions
 
@@ -73,9 +73,9 @@ Test Scenario: User takes knowledge quiz
 | ------------- | ------------- | ------------- |
 | Database is set up | Features are displayed on website, quiz questions render, quiz results is able to be displayed | Features do not render properly, quiz is disconnected from the database |
 | User navigates to the quiz page | User is able to navigate to the right page to take the knowledge quiz | User navigates to a different page that is not the quiz page or receives a 404 error |
-| User selects an answer for a question from 2 or 4 options | Only one choice is able to be selected at a time, and the selected answer choice should be highlighted | Multiple answers are selected, or none at all, or the answer chosen is not obvious to the user |
+| User selects an answer for a question from 4 options | Only one choice is able to be selected at a time, and the selected answer choice should be highlighted | Multiple answers are selected, or none at all, or the answer chosen is not visually obvious to the user |
 | User clicks on the submit button after filling out every question on the quiz | Clicking on submit button after completing quiz leads to quiz results page and calculates quiz score | Clicking on submit button does not lead user to quiz results page while saving the user’s answers |
-| User receives quiz results | Correct score is displayed, as well as the correct answers to the questions | Incorrect score is displayed (or not at all), and correct answers are not displayed |
+| User receives quiz results | Correct score is displayed via pie chart, as well as the correct answers to the questions and the user's answers to the questions | Incorrect score is displayed (or not at all), correct answers are not displayed, and/or user's answers are not displayed |
 
 ## References
 Bergerson, E. (2020, January 8). Seattle Traffic Report gives an in-depth look at 2018 travel trends. SDOT Blog. https://sdotblog.seattle.gov/2019/12/31/seattle-traffic-report-gives-an-in-depth-look-at-2018-travel-trends/#:~:text=On%20average%2C%20people%20took%20about,trips%20were%20on%20surface%20streets  
@@ -93,4 +93,3 @@ Lloyd, S. A. (2017, September 21). How do Seattle commutes happen?. Curbed Seatt
 United Nations Sustainable Development (2023). Climate Change. United Nations Sustainable Development. https://www.un.org/sustainabledevelopment/climate-change/   
 
 University of California (2017). Where do greenhouse gas emissions come from?. University of California. https://www.universityofcalifornia.edu/news/where-do-greenhouse-gas-emissions-come 
-
