@@ -14,10 +14,10 @@ export default function NavbarComponent(props) {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className='ms-auto'>
-                        <Nav.Link className='nav-link' as={NavLink} to="/home" >Home</Nav.Link>
-                        <Nav.Link className='nav-link' as={NavLink} to='/emissions_calculator'>Emissions Calculator</Nav.Link>
-                        <Nav.Link className='nav-link' as={NavLink} to='/resources'>Resources</Nav.Link>
-                        <Nav.Link className='nav-link' as={NavLink} to='/knowledge_quiz'>Knowledge Quiz</Nav.Link>
+                        <Nav.Link className='nav-link' as={NavLink} to="/home" scroll={true}>Home</Nav.Link>
+                        <Nav.Link className='nav-link' as={NavLink} to='/emissions_calculator' scroll={true}>Emissions Calculator</Nav.Link>
+                        <Nav.Link className='nav-link' as={NavLink} to='/resources' scroll={true}>Resources</Nav.Link>
+                        <Nav.Link className='nav-link' as={NavLink} to='/knowledge_quiz' scroll={true}>Knowledge Quiz</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
