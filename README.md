@@ -1,31 +1,36 @@
-<div align="center">
-  # Go Green
-</div>
-## Team 3 Scams
-Group Members: Sabrina Lin, Claire Lai, Alyson Yu, Mari Woodworth, Sarah Chu 
+<h1 align="center">Go Green</h1>
+
+<h2 align="center">Team 3 SCAMS</h2>
+
+<p align="center">Group Members: Sabrina Lin, Claire Lai, Alyson Yu, Mari Woodworth, Sarah Chu </p>
+
+## Background
+Within the last 10 years, billions of people died due to natural disasters caused by human-generated carbon emissions, ranging from floods to droughts to hurricanes (United Nations Sustainable Development, 2023). The transportation sector stands as one of the leading contributors to greenhouse gas emissions, accounting for 28% of total emissions in 2021 (US EPA, 2021). Cars and other vehicles are a common household source of carbon emissions as many rely on them as transportation to and from work/school. According to the United States Environmental Protection Agency (EPA), while the number varies due to factors such as fuel economy, the average carbon a typical passenger vehicle “emits about 4.6 metric tons of carbon dioxide per year” (Environmental Protection Agency, 2023).
+
+Everyone across the globe will experience the devastating impacts of climate change. It is incredibly important that we take steps to reduce our carbon emissions; human health, ecosystem health, and urban infrastructure will be at risk if we don’t take action soon (United Nations Sustainable Development, 2023). 
+
 
 ## Our Mission
-The transportation sector stands as the leading contributor to greenhouse gas emissions, accounting for 28% of total emissions in 2021 (Sources of greenhouse gas emissions | US EPA 2021). Our web application is focused around [UN Sustainable Goal 13]([url](https://sdgs.un.org/goals/goal13)): Climate Action. According to Goal 13, we need to take action to combat climate change through policies and education. Our mission is to encourage residents of Seattle to utilize more sustainable modes of daily transportation in order to reduce their carbon footprint. Thus, our **How Might We** statement is: How might we encourage residents of Seattle to utilize more sustainable modes of transportation in order to reduce their carbon footprint?  
+Our web application is focused on [UN Sustainable Goal 13]([url](https://sdgs.un.org/goals/goal13)): Climate Action. According to Goal 13, we need to take action to combat climate change through policies and education. Our mission is to encourage residents of Seattle to utilize more sustainable modes of daily transportation in order to reduce their carbon footprint. Thus, our **How Might We** statement is: How might we encourage residents of Seattle to utilize more sustainable modes of transportation in order to reduce their carbon footprint?  
 
-## GitHub Links
-GitHub Repo link: https://github.com/UW-INFO442-AU23/team-scams
-GitHub Pages link:
+## Important Links
+The published site can be viewed here: https://team-scams.vercel.app/home    
+GitHub Repo link: https://github.com/UW-INFO442-AU23/team-scams  
 
 ## Key Features
-* Carbon Emissions Calculator
-* Interactive Transportation Knowledge Quiz
-* Resources Page
-* Scores/Results and Correct Answer for Knowledge Quiz
+* **Carbon Emissions Calculator**: Users can calculate their carbon emissions by inputting the distance they intend to travel (in miles) and mode of transportation. After clicking submit, users can see how close their CO2 emissions is to 0g and learn about alternative modes of transportation that have a lower carbon emissions output.
+* **Resources**: Users can find relevant information and resources about sustainable transportation in King County.
+* **Interactive Transportation Knowledge Quiz**: After looking through our resources, users can take our knowledge quiz to test what they've learned. After clicking submit, they'll see a pie chart indicating what percent they got correct, the right answers, and links to learn more.  
 
-## Modes of Transportation In Carbon Emissions Calculator
+## Modes of Transportation Included in Carbon Emissions Calculator
+* Walking
 * Biking
 * Bus
 * Car
 * Carpool
-* Link Light Rail
+* Electric Lightrail
+* Train (Diesel)
 * Plane
-* Train
-* Walking
 
 ## User Personas
 View our user personas here: https://drive.google.com/file/d/1Toz8Tbt1K45uOd2hNt1QswbnrTUZuDaJ/view?usp=drive_link
@@ -37,6 +42,7 @@ View our user personas here: https://drive.google.com/file/d/1Toz8Tbt1K45uOd2hNt
 * CSS
 * Javascript
 * React
+* Bootstrap
 
 ### Start Localhost
 ```npm start```
@@ -70,5 +76,19 @@ Test Scenario: User takes knowledge quiz
 | User receives quiz results | Correct score is displayed, as well as the correct answers to the questions | Incorrect score is displayed (or not at all), and correct answers are not displayed |
 
 ## References
-[insert references here]
-_Sources of greenhouse gas emissions_ | US EPA. (n.d.). https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions
+Bergerson, E. (2020, January 8). Seattle Traffic Report gives an in-depth look at 2018 travel trends. SDOT Blog. https://sdotblog.seattle.gov/2019/12/31/seattle-traffic-report-gives-an-in-depth-look-at-2018-travel-trends/#:~:text=On%20average%2C%20people%20took%20about,trips%20were%20on%20surface%20streets  
+
+Environmental Protection Agency. (2023). Greenhouse Gas Emissions From A Typical Passenger Vehicle. https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle#typical-passenger  
+
+Environmental Protection Agency. (2023). Sources of Greenhouse Gas Emissions. https://www.epa.gov/ghgemissions/sources-greenhouse-gas-emissions#transportation  
+
+Hovenkotter, K. (2023, March 17). 2022 Seattle Commute Survey Results. Commute Seattle. https://www.commuteseattle.com/2022survey/  
+
+Levin, M. (2022, September 1). Seattle was a transit success story before COVID. how’s it doing now? Marketplace. https://www.marketplace.org/2022/09/01/seattle-was-a-transit-success-story-before-covid-hows-it-doing-now/  
+
+Lloyd, S. A. (2017, September 21). How do Seattle commutes happen?. Curbed Seattle. https://seattle.curbed.com/2017/9/21/16346824/seattle-commute-data-bus-drive  
+
+United Nations Sustainable Development (2023). Climate Change. United Nations Sustainable Development. https://www.un.org/sustainabledevelopment/climate-change/   
+
+University of California (2017). Where do greenhouse gas emissions come from?. University of California. https://www.universityofcalifornia.edu/news/where-do-greenhouse-gas-emissions-come 
+
