@@ -53,7 +53,7 @@ View our user personas here: https://drive.google.com/file/d/1Toz8Tbt1K45uOd2hNt
 ### Deploy Build to GitHub Pages
 ```npm run deploy```
 
-### Testing Protocol - Acceptance Tests
+### Testing Protocol
 **Calculator**  
 Test Scenario: User calculates carbon emissions
 
