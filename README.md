@@ -50,10 +50,7 @@ View our user personas here: https://drive.google.com/file/d/1Toz8Tbt1K45uOd2hNt
 ```npm start``` to start Localhost  
 ```Ctrl + C``` to cancel
 
-### Deploy Build to GitHub Pages
-```npm run deploy```
-
-### Testing Protocol - Acceptance Tests
+## Testing Protocol - Acceptance Tests
 **Calculator**  
 Test Scenario: User calculates carbon emissions
 
