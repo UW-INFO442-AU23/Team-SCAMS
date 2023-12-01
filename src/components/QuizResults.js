@@ -149,9 +149,14 @@ export default function QuizResults(props) {
                     </div>
                 {/* </div> */}
                 <div className='button_center'>
-                    <Link to={`/knowledge_quiz`} scroll={true} className="btn btn-primary my-5" onClick={handleSubmit}>Take Quiz Again</Link>
+                    <Link to={`/knowledge_quiz`} scroll={true} className="btn btn-primary my-5" onClick={() => {handleSubmit(); scrollingTop();}}>Take Quiz Again</Link>
                 </div>
             </div>
         </main>
     )
+}
+
+function scrollingTop(props){
+    window.focus()
+    window.scrollTo(0,0)
 }

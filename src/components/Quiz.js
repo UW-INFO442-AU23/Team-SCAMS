@@ -77,8 +77,13 @@ export default function Quiz(props) {
                 </div>
             </div>
             <div className={isAnswered ? 'button_center' : 'disabledbutton'}>
-                <Link to={`/knowledge_quiz_results`} scroll={true} className="btn btn-primary my-5" onClick={handleSubmit}>{"Submit"}</Link>
+                <Link to={`/knowledge_quiz_results`} scroll={true} className="btn btn-primary my-5" onClick={() => {handleSubmit(); scrollingTop();}}>{"Submit"}</Link>
             </div>
         </main>
     )
+}
+
+function scrollingTop(props){
+    window.focus()
+    window.scrollTo(0,0)
 }
