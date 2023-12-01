@@ -18,16 +18,11 @@ The published site can be viewed here: https://team-scams.vercel.app/home
 GitHub Repo link: https://github.com/UW-INFO442-AU23/team-scams  
 
 ## Key Features
-**Carbon Emissions Calculator**
-* Users can calculate their carbon emissions by inputting the distance they intend to travel (in miles) and mode of transportation.
-* After clicking submit, users can see how close their CO2 emissions is to 0g and learn about alternative modes of transportation that have a lower carbon emissions output.
-
-**Resources**
-* Users can find relevant information and resources about sustainable transportation in King County.
-
-**Interactive Transportation Knowledge Quiz**
-* After looking through our resources, users can take our knowledge quiz to test what they've learned.
-* After clicking submit, they'll see a pie chart indicating what percent they got correct, the right answers, and links to learn more.  
+| Key Features | Description |
+| ------------- | ------------- |
+| Carbon Emissions Calculator | Users can calculate their carbon emissions by inputting the distance they intend to travel (in miles) and mode of transportation. After clicking submit, users can see how close their CO2 emissions is to 0g and learn about alternative modes of transportation that have a lower carbon emissions output. |
+| Resources | Users can find relevant information and resources about sustainable transportation in King County. |
+| Interactive Transportation Knowledge Quiz | After looking through our resources, users can take our knowledge quiz to test what they've learned. After clicking submit, they'll see a pie chart indicating what percent they got correct, the right answers, and links to learn more.  |
 
 ## Modes of Transportation Included in Carbon Emissions Calculator
 * Walking
